@@ -94,7 +94,7 @@ public class MyKafkaUtil {
 //注意： 'scan.startup.mode' = 'group-offsets',和 'properties.auto.offset.reset' = 'latest'结合
 //表示先从消费者组提交的偏移量消费，如果不存在从最新的位置开始消费
     public static String getKafkaDDL(String topic, String groupId) {
-        return "WITH (\n" +
+        return " WITH (\n" +
                 "  'connector' = 'kafka',\n" +
                 "  'topic' = '" + topic + "',\n" +
                 "  'properties.bootstrap.servers' = '" + KAFKA_SERVER + "',\n" +

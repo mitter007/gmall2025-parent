@@ -2,7 +2,7 @@ package com.atguigu.gmall.realtime.app.utils;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.pool.DruidPooledConnection;
-import com.atguigu.gmall.realtime.app.common.GmallConfig;
+import com.atguigu.gmall.realtime.app.common.GmallConstant;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -18,9 +18,9 @@ public class DruidDSUtil {
         // 创建连接池
         druidDataSource = new DruidDataSource();
         // 设置驱动全类名
-        druidDataSource.setDriverClassName(GmallConfig.PHOENIX_DRIVER);
+        druidDataSource.setDriverClassName(GmallConstant.PHOENIX_DRIVER);
         // 设置连接 url
-        druidDataSource.setUrl(GmallConfig.PHOENIX_URL);
+        druidDataSource.setUrl(GmallConstant.PHOENIX_URL);
         // 设置初始化连接池时池中连接的数量
         druidDataSource.setInitialSize(5);
         // 设置同时活跃的最大连接数

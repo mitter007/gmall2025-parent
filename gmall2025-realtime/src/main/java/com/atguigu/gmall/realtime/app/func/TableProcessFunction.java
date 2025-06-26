@@ -3,8 +3,7 @@ package com.atguigu.gmall.realtime.app.func;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.atguigu.gmall.realtime.app.bean.TableProcess;
-import com.atguigu.gmall.realtime.app.common.GmallConfig;
-import com.atguigu.gmall.realtime.app.utils.DruidDSUtil;
+import com.atguigu.gmall.realtime.app.common.GmallConstant;
 import com.atguigu.gmall.realtime.app.utils.PhoenixUtil;
 import org.apache.flink.api.common.state.BroadcastState;
 import org.apache.flink.api.common.state.MapStateDescriptor;
@@ -212,7 +211,7 @@ public class TableProcessFunction extends BroadcastProcessFunction<JSONObject, S
             pk = "id";
         }
         //拼接建表语句
-        StringBuilder createSql = new StringBuilder("create table if not exists " + GmallConfig.PHOENIX_SCHEMA + "." + tableName.toUpperCase() + "(");
+        StringBuilder createSql = new StringBuilder("create table if not exists " + GmallConstant.PHOENIX_SCHEMA + "." + tableName.toUpperCase() + "(");
 
         String[] columnArr = columnStr.split(",");
         for (int i = 0; i < columnArr.length; i++) {

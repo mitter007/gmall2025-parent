@@ -1,7 +1,7 @@
 package com.atguigu.gmall.realtime.app.func;
 
 import com.alibaba.fastjson.JSONObject;
-import com.atguigu.gmall.realtime.app.common.GmallConfig;
+import com.atguigu.gmall.realtime.app.common.GmallConstant;
 import com.atguigu.gmall.realtime.app.utils.PhoenixUtil;
 import org.apache.commons.lang.StringUtils;
 import org.apache.flink.streaming.api.functions.sink.SinkFunction;
@@ -24,7 +24,7 @@ public class DimSinkFunction implements SinkFunction<JSONObject> {
         jsonObj.remove("sink_table");
         jsonObj.remove("type");
 
-        String upsertSQL = "upsert into " + GmallConfig.PHOENIX_SCHEMA + "." + tableName.toUpperCase()
+        String upsertSQL = "upsert into " + GmallConstant.PHOENIX_SCHEMA + "." + tableName.toUpperCase()
             + "(" + StringUtils.join(jsonObj.keySet(), ",").toUpperCase() + ") " +
             " values" +
             " ('" + StringUtils.join(jsonObj.values(), "','") + "')";

@@ -1,6 +1,6 @@
 package com.atguigu.gmall.realtime.app.utils;
 
-import com.atguigu.gmall.realtime.app.common.GmallConfig;
+import com.atguigu.gmall.realtime.app.common.GmallConstant;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -64,8 +64,8 @@ public class PhoenixUtil {
                 " PRIMARY KEY (id) NOT ENFORCED\n" +
                 ") WITH (\n" +
                 " 'connector' = 'hbase-2.2',\n" +
-                " 'table-name' = '" + GmallConfig.PHOENIX_SCHEMA + ":dim_base_dic',\n".toUpperCase() +
-                " 'zookeeper.quorum' = '" + GmallConfig.PHOENIX_URL + "'\n" +
+                " 'table-name' = '" + GmallConstant.PHOENIX_SCHEMA + ":dim_base_dic',\n".toUpperCase() +
+                " 'zookeeper.quorum' = '" + GmallConstant.PHOENIX_URL + "'\n" +
                 ")";
     }
 
