@@ -25,10 +25,11 @@ public class MyKafkaUtil {
                 //为了保证一致性，在消费数据的时候，我们这里只读取已提交的消息
                 // .setProperty(ConsumerConfig.ISOLATION_LEVEL_CONFIG,"read_committed")
                 // 在学习的时候，我们可以直接从kafka最新位置开始读取
-                .setStartingOffsets(OffsetsInitializer.earliest())
+                .setStartingOffsets(OffsetsInitializer.latest())
 
                 //注意：如果使用SimpleStringSchema进行反序列化的话，不能处理空消息
-                .setValueOnlyDeserializer(new SimpleStringSchema()) //      throw new NullPointerException();
+                //      throw new NullPointerException();
+                .setValueOnlyDeserializer(new SimpleStringSchema())
                 .setValueOnlyDeserializer(
                         new DeserializationSchema<String>() {
                             @Override

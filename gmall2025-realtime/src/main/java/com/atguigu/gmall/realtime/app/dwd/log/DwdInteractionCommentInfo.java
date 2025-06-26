@@ -2,6 +2,7 @@ package com.atguigu.gmall.realtime.app.dwd.log;
 
 import com.atguigu.gmall.realtime.app.utils.MyKafkaUtil;
 import com.atguigu.gmall.realtime.app.utils.MySqlUtil;
+import com.atguigu.gmall.realtime.app.utils.PhoenixUtil;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
@@ -36,8 +37,9 @@ public class DwdInteractionCommentInfo {
 
         // TODO 5. 建立 MySQL-LookUp 字典表
 //        在这里维度表数据明明写到hbase中了为什么还又从mysql中拿呢。
-        tableEnv.executeSql(MySqlUtil.getBaseDicLookUpDDL());
-
+//        tableEnv.executeSql(MySqlUtil.getBaseDicLookUpDDL());
+//        从Phoenix中获取
+        tableEnv.executeSql(PhoenixUtil.getBaseDicDDL());
         // TODO 6. 关联两张表获得评论明细表
         Table resultTable = tableEnv.sqlQuery("select " +
             "ci.id," +
