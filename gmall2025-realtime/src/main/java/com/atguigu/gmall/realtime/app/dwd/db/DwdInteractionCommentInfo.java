@@ -1,4 +1,4 @@
-package com.atguigu.gmall.realtime.app.dwd.log;
+package com.atguigu.gmall.realtime.app.dwd.db;
 
 import com.atguigu.gmall.realtime.app.utils.MyKafkaUtil;
 import com.atguigu.gmall.realtime.app.utils.MySqlUtil;
