@@ -109,7 +109,7 @@ public class MyKafkaUtil {
 
     //获取upsert-kafka的连接属性
     public static String getUpsertKafkaDDL(String topic) {
-        return "WITH (\n" +
+        return " WITH (\n" +
                 "  'connector' = 'upsert-kafka',\n" +
                 "  'topic' = '" + topic + "',\n" +
                 "  'properties.bootstrap.servers' = '" + KAFKA_SERVER + "',\n" +
