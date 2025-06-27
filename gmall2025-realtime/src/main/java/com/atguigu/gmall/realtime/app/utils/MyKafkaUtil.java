@@ -3,10 +3,12 @@ package com.atguigu.gmall.realtime.app.utils;
 import org.apache.flink.api.common.serialization.DeserializationSchema;
 import org.apache.flink.api.common.serialization.SimpleStringSchema;
 import org.apache.flink.api.common.typeinfo.TypeInformation;
+import org.apache.flink.connector.base.DeliveryGuarantee;
 import org.apache.flink.connector.kafka.sink.KafkaRecordSerializationSchema;
 import org.apache.flink.connector.kafka.sink.KafkaSink;
 import org.apache.flink.connector.kafka.source.KafkaSource;
 import org.apache.flink.connector.kafka.source.enumerator.initializer.OffsetsInitializer;
+import org.apache.kafka.clients.producer.ProducerConfig;
 
 import java.io.IOException;
 
@@ -117,5 +119,21 @@ public class MyKafkaUtil {
                 "  'value.format' = 'json'\n" +
                 ")";
     }
-
+    //自定义序列化器获取获取kakfaSink
+    public static <T>KafkaSink<T> getKafkaSinkBySchema(KafkaRecordSerializationSchema<T> krs) {
+        KafkaSink<T> kafkaSink = KafkaSink.<T>builder()
+                .setBootstrapServers(KAFKA_SERVER)
+                .setRecordSerializer(krs)
+                //注意：要想保证写到kafka的精准一次，需要做如下几个操作
+                //1.DeliveryGuarantee.EXACTLY_ONCE   底层会开启事务
+                //2.kafka的消费者的隔离级别  需要设置为读已提交
+                //3.需要开启检查点
+                //4.设置事务超时时间，应该大于检查点超时时间，并小于等于最大时间
+                //5.指定事务ID前缀
+                // .setDeliveryGuarantee(DeliveryGuarantee.EXACTLY_ONCE)
+                // .setProperty(ProducerConfig.TRANSACTION_TIMEOUT_CONFIG,15*60*1000+"")
+                // .setTransactionalIdPrefix("事务ID前缀")
+                .build();
+        return kafkaSink;
+    }
 }

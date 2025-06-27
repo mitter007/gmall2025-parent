@@ -14,8 +14,6 @@ public class DimSinkFunction implements SinkFunction<JSONObject> {
     // jonObj:  {"tm_name":"xzls11","sink_table":"dim_base_trademark","id":12}
     @Override
     public void invoke(JSONObject jsonObj, Context context) throws Exception {
-        System.out.println("*******************************");
-        System.out.println(jsonObj.toJSONString());
 
         //获取维度输出的目的地表名
         String tableName = jsonObj.getString("sink_table");
@@ -28,7 +26,6 @@ public class DimSinkFunction implements SinkFunction<JSONObject> {
             + "(" + StringUtils.join(jsonObj.keySet(), ",").toUpperCase() + ") " +
             " values" +
             " ('" + StringUtils.join(jsonObj.values(), "','") + "')";
-        System.out.println("向phoenix表中插入数据的语句为：" + upsertSQL);
 
         //调用向Phoenix表中插入数据的方法
         PhoenixUtil.executeSql(upsertSQL);

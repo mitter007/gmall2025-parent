@@ -26,7 +26,8 @@ public class TableProcessFunction extends BroadcastProcessFunction<JSONObject, S
     public TableProcessFunction(MapStateDescriptor<String, TableProcess> mapStateDescriptor) {
         this.mapStateDescriptor = mapStateDescriptor;
     }
-
+//      不是已经写入到广播流里面了嘛》怎么这里又要重新拿一遍
+//    这里只会加在一次
     @Override
     public void open(Configuration parameters) throws Exception {
         //将配置表中的配置信息加载到内存中
@@ -57,6 +58,10 @@ public class TableProcessFunction extends BroadcastProcessFunction<JSONObject, S
         ps.close();
         conn.close();
     }
+
+//
+// jsonObj：{"database":"gmall-flink","table":"base_region","type":"bootstrap-insert","ts":1750996640,"data":{"id":"7","region_name":"西北","create_time":"2020-05-01 11:20:40","operate_time":null}}
+
 
     //处理主流数据
     @Override
@@ -138,6 +143,7 @@ public class TableProcessFunction extends BroadcastProcessFunction<JSONObject, S
                 String sinkExtend = after.getSinkExtend();
                 //提前将维度表创建出来
                 checkTable(sinkTable, sinkColumns, sinkPk, sinkExtend);
+
                 broadcastState.put(sourceTable, after);
                 configMap.put(sourceTable,after);
             }
@@ -203,6 +209,8 @@ public class TableProcessFunction extends BroadcastProcessFunction<JSONObject, S
 
     //创建维度表
     private void checkTable(String tableName, String columnStr, String pk, String ext) {
+
+        System.out.println("************checkTable***************");
         //对空值进行处理
         if (ext == null) {
             ext = "";

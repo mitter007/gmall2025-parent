@@ -37,7 +37,7 @@ import org.apache.flink.util.OutputTag;
  * 	如果键控状态为 null，说明访问 APP 的是老访客但本次是该访客的页面日志首次进入程序。当前端新老访客状态标记丢失时，日志进入程序被判定为新访客，Flink 程序就可以纠正被误判的访客状态标记，只要将状态中的日期设置为今天之前即可。本程序选择将状态更新为昨日；
  * 	如果键控状态不为 null，说明程序已经维护了首次访问日期，不做操作。
  */
-public class DwdTrafficBaseLogSplit {
+public class Dwd01_DwdTrafficBaseLogSplit {
     public static void main(String[] args) throws Exception {
         //TODO 1.基本环境准备
         //1.1 指定流处理环境
@@ -73,7 +73,7 @@ public class DwdTrafficBaseLogSplit {
         });
         //TODO 5.将侧输出流中脏数据写到kafka主题中
 
-        // processDS.print(">>>");
+         processDS.print("processDS>>>");
         DataStream<String> dirtyDS = processDS.getSideOutput(dirtyTag);
         // dirtyDS.print("$$$");
         KafkaSink<String> kafkaSink = MyKafkaUtil.getKafkaSink("dirty_data");
@@ -223,11 +223,13 @@ public class DwdTrafficBaseLogSplit {
         DataStream<String> displayDS = pageDS.getSideOutput(displayTag);
         DataStream<String> actionDS = pageDS.getSideOutput(actionTag);
 
-        pageDS.print(">>>>");
+/*        pageDS.print(">>>>");
         errDS.print("@@@");
         startDS.print("###");
         displayDS.print("$$");
-        actionDS.print("&&&&");
+        actionDS.print("&&&&");*/
+        KafkaSink<String> kafkaSink1 = MyKafkaUtil.getKafkaSink("dwd_traffic_page_log");
+        System.out.println(kafkaSink1.toString());
 
         pageDS.sinkTo(MyKafkaUtil.getKafkaSink("dwd_traffic_page_log"));
         errDS.sinkTo(MyKafkaUtil.getKafkaSink("dwd_traffic_err_log"));

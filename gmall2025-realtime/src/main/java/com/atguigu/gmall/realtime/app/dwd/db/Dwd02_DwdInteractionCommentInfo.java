@@ -1,13 +1,15 @@
 package com.atguigu.gmall.realtime.app.dwd.db;
 
 import com.atguigu.gmall.realtime.app.utils.MyKafkaUtil;
-import com.atguigu.gmall.realtime.app.utils.MySqlUtil;
 import com.atguigu.gmall.realtime.app.utils.PhoenixUtil;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 
-public class DwdInteractionCommentInfo {
+/**
+ *
+ */
+public class Dwd02_DwdInteractionCommentInfo {
     public static void main(String[] args) throws Exception {
 
         // TODO 1. 环境准备
@@ -21,6 +23,8 @@ public class DwdInteractionCommentInfo {
         tableEnv.executeSql(MyKafkaUtil.getTopicDbDDL("dwd_interaction_comment_info"));
 
         // TODO 4. 从业务表中过滤出评论表数据
+
+//        proc_time 是从哪里来的
         Table commentInfo = tableEnv.sqlQuery(
             "select " +
                 "data['id'] id," +
@@ -40,6 +44,9 @@ public class DwdInteractionCommentInfo {
 //        tableEnv.executeSql(MySqlUtil.getBaseDicLookUpDDL());
 //        从Phoenix中获取
         tableEnv.executeSql(PhoenixUtil.getBaseDicDDL());
+      tableEnv.sqlQuery("" +
+                "select * from base_dic ");
+//        System.out.println(table.toString());
         // TODO 6. 关联两张表获得评论明细表
         Table resultTable = tableEnv.sqlQuery("select " +
             "ci.id," +
@@ -51,7 +58,7 @@ public class DwdInteractionCommentInfo {
             "ts" +
             " from comment_info ci " +
             " join base_dic for system_time as of ci.proc_time as dic " +
-            " on ci.appraise=dic.dic_code");
+            " on ci.appraise=dic.rowkey");
         tableEnv.createTemporaryView("result_table", resultTable);
 
         //tableEnv.executeSql("select * from result_table").print();
@@ -70,6 +77,8 @@ public class DwdInteractionCommentInfo {
             ")" + MyKafkaUtil.getUpsertKafkaDDL("dwd_interaction_comment"));
 
         // TODO 8. 将关联结果写入 Upsert-Kafka 表
+
+//        resultTable.insertInto("dwd_interaction_comment");
         tableEnv.executeSql("" +
             "insert into dwd_interaction_comment select * from result_table");
     }

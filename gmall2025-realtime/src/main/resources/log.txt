@@ -1,0 +1,33 @@
+GMALL2023_REALTIME | DIM_ACTIVITY_INFO      | TABLE        |         |           |                           |                |             | false          | null  |
+|           | GMALL2023_REALTIME | DIM_ACTIVITY_RULE      | TABLE        |         |           |                           |                |             | false          | null  |
+|           | GMALL2023_REALTIME | DIM_ACTIVITY_SKU       | TABLE        |         |           |                           |                |             | false          | null  |
+|           | GMALL2023_REALTIME | DIM_BASE_CATEGORY1     | TABLE        |         |           |                           |                |             | false          | null  |
+|           | GMALL2023_REALTIME | DIM_BASE_CATEGORY2     | TABLE        |         |           |                           |                |             | false          | null  |
+|           | GMALL2023_REALTIME | DIM_BASE_CATEGORY3     | TABLE        |         |           |                           |                |             | false          | null  |
+|           | GMALL2023_REALTIME | DIM_BASE_PROVINCE      | TABLE        |         |           |                           |                |             | false          | null  |
+|           | GMALL2023_REALTIME | DIM_BASE_REGION        | TABLE        |         |           |                           |                |             | false          | null  |
+|           | GMALL2023_REALTIME | DIM_BASE_TRADEMARK     | TABLE        |         |           |                           |                |             | false          | null  |
+|           | GMALL2023_REALTIME | DIM_COUPON_INFO        | TABLE        |         |           |                           |                |             | false          | null  |
+|           | GMALL2023_REALTIME | DIM_COUPON_RANGE       | TABLE        |         |           |                           |                |             | false          | null  |
+|           | GMALL2023_REALTIME | DIM_FINANCIAL_SKU_COST | TABLE        |         |           |                           |                |             | false          | null  |
+|           | GMALL2023_REALTIME | DIM_SKU_INFO           | TABLE        |         |           |                           |                |             | false          | 4     |
+|           | GMALL2023_REALTIME | DIM_SPU_INFO           | TABLE        |         |           |                           |                |             | false          | 3     |
+|           | GMALL2023_REALTIME | DIM_USER_INFO          | TABLE
+
+
+
+
+DROP TABLE  GMALL_REALTIME.DIM_ACTIVITY_RULE;
+DROP TABLE  GMALL_REALTIME.DIM_ACTIVITY_SKU;
+DROP TABLE  GMALL_REALTIME.DIM_BASE_CATEGORY1;
+DROP TABLE  GMALL_REALTIME.DIM_BASE_CATEGORY2;
+DROP TABLE  GMALL_REALTIME.DIM_BASE_CATEGORY3;
+DROP TABLE  GMALL_REALTIME.DIM_BASE_PROVINCE;
+DROP TABLE  GMALL_REALTIME.DIM_BASE_REGION;
+DROP TABLE  GMALL_REALTIME.DIM_BASE_TRADEMARK;
+DROP TABLE  GMALL_REALTIME.DIM_COUPON_INFO;
+DROP TABLE  GMALL_REALTIME.DIM_COUPON_RANGE;
+DROP TABLE  GMALL_REALTIME.DIM_FINANCIAL_SKU_COST;
+DROP TABLE  GMALL_REALTIME.DIM_SKU_INFO;
+DROP TABLE  GMALL_REALTIME.DIM_SPU_INFO;
+DROP TABLE  GMALL_REALTIME.DIM_USER_INFO;

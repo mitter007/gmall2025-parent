@@ -1,6 +1,7 @@
 package com.atguigu.gmall.realtime.app.utils;
 
 import com.atguigu.gmall.realtime.app.common.GmallConstant;
+import jline.internal.Log;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -26,6 +27,7 @@ public class PhoenixUtil {
             conn = DriverManager.getConnection(url, properties);
         } catch (SQLException e) {
             System.out.println("出错了");
+            e.printStackTrace();
             throw new RuntimeException(e);
         }
         PreparedStatement ps = null;
@@ -58,15 +60,13 @@ public class PhoenixUtil {
 
     public static String getBaseDicDDL() {
         return "CREATE TABLE base_dic (\n" +
-                " id string,\n" +
-                "  dic_code string,\n" +
-                "  dic_name STRING,\n" +
-                " PRIMARY KEY (id) NOT ENFORCED\n" +
+                " rowkey string,\n" +
+                " info ROW<dic_name string>,\n" +
+                " PRIMARY KEY (rowkey) NOT ENFORCED\n" +
                 ") WITH (\n" +
                 " 'connector' = 'hbase-2.2',\n" +
                 " 'table-name' = '" + GmallConstant.PHOENIX_SCHEMA + ":dim_base_dic',\n".toUpperCase() +
                 " 'zookeeper.quorum' = '" + GmallConstant.PHOENIX_URL + "'\n" +
                 ")";
     }
-
 }

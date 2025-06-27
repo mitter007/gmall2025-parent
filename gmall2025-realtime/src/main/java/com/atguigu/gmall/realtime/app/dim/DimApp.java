@@ -83,6 +83,8 @@ public class DimApp {
 
         // TODO 6. FlinkCDC 读取配置流并广播流
         // 6.1 FlinkCDC 读取配置表信息
+
+//        {"before":{"source_table":"base_dic","source_type":"ALL","sink_table":"dim_base_dic","sink_type":"dim","sink_columns":"dic_code,dic_name,parent_code","sink_pk":null,"sink_extend":null},"after":{"source_table":"base_dic","source_type":"ALL","sink_table":"dim_base_dic","sink_type":"dim","sink_columns":"dic_code,dic_name,parent_code","sink_pk":"dic_code","sink_extend":null},"source":{"version":"1.6.4.Final","connector":"mysql","name":"mysql_binlog_source","ts_ms":1751008444000,"snapshot":"false","db":"gmall_config","sequence":null,"table":"table_process","server_id":1,"gtid":null,"file":"mysql-bin.000004","pos":2725974,"row":0,"thread":null,"query":null},"op":"u","ts_ms":1751008444191,"transaction":null}
         Properties props = new Properties();
         props.setProperty("useSSL", "false");
         MySqlSource<String> mySqlSource = MySqlSource.<String>builder()
@@ -100,10 +102,12 @@ public class DimApp {
         // 6.2 封装为流
         DataStreamSource<String> mysqlDS
                 = env.fromSource(mySqlSource, WatermarkStrategy.noWatermarks(), "MysqlSource");
+        mysqlDS.print("mysql>>>>");
 
         // 6.3 广播配置流
         MapStateDescriptor<String, TableProcess> tableConfigDescriptor
                 = new MapStateDescriptor<String, TableProcess>("table-process-state", String.class, TableProcess.class);
+
         BroadcastStream<String> broadcastDS = mysqlDS.broadcast(tableConfigDescriptor);
         // TODO 7. 将主流和配置流进行关联
         BroadcastConnectedStream<JSONObject, String> connectedStream = jsonObjDS.connect(broadcastDS);
