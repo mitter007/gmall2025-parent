@@ -1,6 +1,7 @@
 package com.atguigu.gmall.realtime.app.dwd.db;
 
 import com.atguigu.gmall.realtime.app.utils.MyKafkaUtil;
+import com.atguigu.gmall.realtime.app.utils.MySqlUtil;
 import com.atguigu.gmall.realtime.app.utils.PhoenixUtil;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.Table;
@@ -79,20 +80,20 @@ public class Dwd06_TradePayDetailSuc {
         tableEnv.createTemporaryView("payment_info", paymentInfo);
 
         // TODO 6. 建立 HBase-LookUp 字典表
-        tableEnv.executeSql(PhoenixUtil.getBaseDicDDL());
-
+//        tableEnv.executeSql(PhoenixUtil.getBaseDicDDL());
+        tableEnv.executeSql(MySqlUtil.getBaseDicLookUpDDL());
         // TODO 7. 关联 3 张表获得支付成功宽表
         Table joinTable = tableEnv.sqlQuery("" +
                 "select\n" +
                 "pi.order_id order_id,\n" +
                 "pi.payment_type payment_type_code,\n" +
-                "info.dic_name payment_type_name,\n" +
+                "dic_name payment_type_name,\n" +
                 "pi.callback_time,\n" +
                 "pi.row_time,\n" +
                 "pi.ts\n" +
                 "from payment_info pi\n" +
                 "join `base_dic` for system_time as of pi.proc_time as dic\n" +
-                "on pi.payment_type = dic.rowkey");
+                "on pi.payment_type = dic.dic_code");
         tableEnv.createTemporaryView("join_table", joinTable);
 
         Table resultTable = tableEnv.sqlQuery("" +
@@ -151,6 +152,7 @@ public class Dwd06_TradePayDetailSuc {
                 ")" + MyKafkaUtil.getUpsertKafkaDDL("dwd_trade_pay_detail_suc"));
 
         // TODO 9. 将关联结果写入 Upsert-Kafka 表
+//        resultTable.insertInto("dwd_trade_pay_detail_suc");
         tableEnv.executeSql("insert into dwd_trade_pay_detail_suc select * from result_table");
     }
 }

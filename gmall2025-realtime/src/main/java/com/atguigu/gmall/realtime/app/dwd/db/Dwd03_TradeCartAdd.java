@@ -57,20 +57,20 @@ public class Dwd03_TradeCartAdd {
 
         //TODO 4.构建DWD层加购主题
 
-        System.out.println("" +
-                "create table dwd_cart_info(\n" +
-                "    `id` string,\n" +
-                "    `user_id` string,\n" +
-                "    `sku_id` string,\n" +
-                "    `cart_price` string,\n" +
-                "    `sku_num` string,\n" +
-                "    `sku_name` string,\n" +
-                "    `is_checked` string,\n" +
-                "    `create_time` string,\n" +
-                "    `operate_time` string,\n" +
-                "    `source_type` string,\n" +
-                "    `source_id` string\n" +
-                ")" + MyKafkaUtil.getKafkaDDL(GmallConstant.TOPIC_DWD_TRADE_CART_ADD,GmallConstant.TOPIC_DWD_TRADE_CART_ADD));
+//        System.out.println("" +
+//                "create table dwd_cart_info(\n" +
+//                "    `id` string,\n" +
+//                "    `user_id` string,\n" +
+//                "    `sku_id` string,\n" +
+//                "    `cart_price` string,\n" +
+//                "    `sku_num` string,\n" +
+//                "    `sku_name` string,\n" +
+//                "    `is_checked` string,\n" +
+//                "    `create_time` string,\n" +
+//                "    `operate_time` string,\n" +
+//                "    `source_type` string,\n" +
+//                "    `source_id` string\n" +
+//                ")" + MyKafkaUtil.getKafkaDDL(GmallConstant.TOPIC_DWD_TRADE_CART_ADD,GmallConstant.TOPIC_DWD_TRADE_CART_ADD));
         tableEnv.executeSql("" +
                 "create table dwd_cart_info(\n" +
                 "    `id` string,\n" +
@@ -85,20 +85,21 @@ public class Dwd03_TradeCartAdd {
                 "    `source_type` string,\n" +
                 "    `source_id` string\n" +
                 ")" +MyKafkaUtil.getKafkaDDL(GmallConstant.TOPIC_DWD_TRADE_CART_ADD,GmallConstant.TOPIC_DWD_TRADE_CART_ADD));
-        System.out.println("" +
-                "create table dwd_cart_info(\n" +
-                "    `id` string,\n" +
-                "    `user_id` string,\n" +
-                "    `sku_id` string,\n" +
-                "    `cart_price` string,\n" +
-                "    `sku_num` string,\n" +
-                "    `sku_name` string,\n" +
-                "    `is_checked` string,\n" +
-                "    `create_time` string,\n" +
-                "    `operate_time` string,\n" +
-                "    `source_type` string,\n" +
-                "    `source_id` string\n" +
-                ")" + MyKafkaUtil.getKafkaSink(GmallConstant.TOPIC_DWD_TRADE_CART_ADD));
+
+//        System.out.println("" +
+//                "create table dwd_cart_info(\n" +
+//                "    `id` string,\n" +
+//                "    `user_id` string,\n" +
+//                "    `sku_id` string,\n" +
+//                "    `cart_price` string,\n" +
+//                "    `sku_num` string,\n" +
+//                "    `sku_name` string,\n" +
+//                "    `is_checked` string,\n" +
+//                "    `create_time` string,\n" +
+//                "    `operate_time` string,\n" +
+//                "    `source_type` string,\n" +
+//                "    `source_id` string\n" +
+//                ")" + MyKafkaUtil.getKafkaSink(GmallConstant.TOPIC_DWD_TRADE_CART_ADD));
 
         //TODO 5.写出数据
         resultTable.insertInto("dwd_cart_info")

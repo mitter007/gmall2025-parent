@@ -1,6 +1,7 @@
 package com.atguigu.gmall.realtime.app.dwd.db;
 
 import com.atguigu.gmall.realtime.app.utils.MyKafkaUtil;
+import com.atguigu.gmall.realtime.app.utils.MySqlUtil;
 import com.atguigu.gmall.realtime.app.utils.PhoenixUtil;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.Table;
@@ -41,9 +42,9 @@ public class Dwd02_DwdInteractionCommentInfo {
 
         // TODO 5. 建立 MySQL-LookUp 字典表
 //        在这里维度表数据明明写到hbase中了为什么还又从mysql中拿呢。
-//        tableEnv.executeSql(MySqlUtil.getBaseDicLookUpDDL());
+        tableEnv.executeSql(MySqlUtil.getBaseDicLookUpDDL());
 //        从Phoenix中获取
-        tableEnv.executeSql(PhoenixUtil.getBaseDicDDL());
+//        tableEnv.executeSql(PhoenixUtil.getBaseDicDDL());
       tableEnv.sqlQuery("" +
                 "select * from base_dic ");
 //        System.out.println(table.toString());
@@ -58,7 +59,7 @@ public class Dwd02_DwdInteractionCommentInfo {
             "ts" +
             " from comment_info ci " +
             " join base_dic for system_time as of ci.proc_time as dic " +
-            " on ci.appraise=dic.rowkey");
+            " on ci.appraise=dic.dic_code");
         tableEnv.createTemporaryView("result_table", resultTable);
 
         //tableEnv.executeSql("select * from result_table").print();

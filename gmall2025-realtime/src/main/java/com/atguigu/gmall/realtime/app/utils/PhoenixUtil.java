@@ -59,14 +59,22 @@ public class PhoenixUtil {
     }
 
     public static String getBaseDicDDL() {
-        return "CREATE TABLE base_dic (\n" +
-                " rowkey string,\n" +
-                " info ROW<dic_name string>,\n" +
-                " PRIMARY KEY (rowkey) NOT ENFORCED\n" +
-                ") WITH (\n" +
-                " 'connector' = 'hbase-2.2',\n" +
-                " 'table-name' = '" + GmallConstant.PHOENIX_SCHEMA + ":dim_base_dic',\n".toUpperCase() +
-                " 'zookeeper.quorum' = '" + GmallConstant.PHOENIX_URL + "'\n" +
-                ")";
+
+        String s=
+                "" +
+                        "CREATE TABLE base_dic (\n" +
+                        "    dic_code STRING,             -- 主键，同时作为 rowkey\n" +
+                        "    dic_name STRING,\n" +
+                        "    parent_code STRING\n" +
+                        ") WITH (\n" +
+                        " 'connector' = 'hbase-2.2',\n" +
+                        " 'table-name' = '" + GmallConstant.PHOENIX_SCHEMA + ":dim_base_dic',\n".toUpperCase() +
+                        " 'zookeeper.quorum' = '" + GmallConstant.PHOENIX_URL + "'\n" +
+                        ")";
+        return s;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getBaseDicDDL());
     }
 }

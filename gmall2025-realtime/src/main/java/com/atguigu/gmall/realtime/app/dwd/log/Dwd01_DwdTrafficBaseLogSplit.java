@@ -73,7 +73,7 @@ public class Dwd01_DwdTrafficBaseLogSplit {
         });
         //TODO 5.将侧输出流中脏数据写到kafka主题中
 
-         processDS.print("processDS>>>");
+//         processDS.print("processDS>>>");
         DataStream<String> dirtyDS = processDS.getSideOutput(dirtyTag);
         // dirtyDS.print("$$$");
         KafkaSink<String> kafkaSink = MyKafkaUtil.getKafkaSink("dirty_data");
@@ -223,19 +223,18 @@ public class Dwd01_DwdTrafficBaseLogSplit {
         DataStream<String> displayDS = pageDS.getSideOutput(displayTag);
         DataStream<String> actionDS = pageDS.getSideOutput(actionTag);
 
-/*        pageDS.print(">>>>");
-        errDS.print("@@@");
+        pageDS.print(">>>>");
         startDS.print("###");
+/*        errDS.print("@@@");
         displayDS.print("$$");
         actionDS.print("&&&&");*/
         KafkaSink<String> kafkaSink1 = MyKafkaUtil.getKafkaSink("dwd_traffic_page_log");
-        System.out.println(kafkaSink1.toString());
 
         pageDS.sinkTo(MyKafkaUtil.getKafkaSink("dwd_traffic_page_log"));
-        errDS.sinkTo(MyKafkaUtil.getKafkaSink("dwd_traffic_err_log"));
         startDS.sinkTo(MyKafkaUtil.getKafkaSink("dwd_traffic_start_log"));
-        displayDS.sinkTo(MyKafkaUtil.getKafkaSink("dwd_traffic_display_log"));
-        actionDS.sinkTo(MyKafkaUtil.getKafkaSink("dwd_traffic_action_log"));
+//        errDS.sinkTo(MyKafkaUtil.getKafkaSink("dwd_traffic_err_log"));
+//        displayDS.sinkTo(MyKafkaUtil.getKafkaSink("dwd_traffic_display_log"));
+//        actionDS.sinkTo(MyKafkaUtil.getKafkaSink("dwd_traffic_action_log"));
 
         env.execute();
     }

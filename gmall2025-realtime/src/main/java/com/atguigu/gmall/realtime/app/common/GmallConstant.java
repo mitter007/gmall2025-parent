@@ -31,5 +31,10 @@ public class GmallConstant {
     public static final String MYSQL_URL = "jdbc:mysql://hadoop103:3306?useSSL=false";
 
     public static final int ONE_DAY = 24 * 60 * 60;
+    // ClickHouse 驱动
+    public static final String CLICKHOUSE_DRIVER = "ru.yandex.clickhouse.ClickHouseDriver";
+
+    // ClickHouse 连接 URL
+    public static final String CLICKHOUSE_URL = "jdbc:clickhouse://hadoop202:8123/gmall";
 
 }

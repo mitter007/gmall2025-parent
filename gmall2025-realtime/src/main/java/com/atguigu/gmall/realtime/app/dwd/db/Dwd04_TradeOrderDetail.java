@@ -206,7 +206,7 @@ public class Dwd04_TradeOrderDetail {
                 "    `coupon_id` string,\n" +
                 "    `coupon_use_id` string,\n" +
                 "    primary key(id) not enforced\n" +
-                ")" + MyKafkaUtil.getUpsertKafkaDDL(GmallConstant.TOPIC_DWD_TRADE_ORDER_DETAIL));
+                ")" + MyKafkaUtil.getUpsertKafkaDDL("dwd_trade_order_detail"));
 
         //TODO 9.写出数据
         resultTable.insertInto("dwd_order_detail")
