@@ -41,7 +41,10 @@ public class Dwd01_DwdTrafficBaseLogSplit {
     public static void main(String[] args) throws Exception {
         //TODO 1.基本环境准备
         //1.1 指定流处理环境
-        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        Configuration conf = new Configuration();
+        conf.setInteger("rest.port", 10001);
+
+        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment(conf);
         //1.2 设置并行度
         env.setParallelism(4);
         //TODO 2.检查点相关的设置(略)
@@ -230,8 +233,8 @@ public class Dwd01_DwdTrafficBaseLogSplit {
         actionDS.print("&&&&");*/
         KafkaSink<String> kafkaSink1 = MyKafkaUtil.getKafkaSink("dwd_traffic_page_log");
 
-        pageDS.sinkTo(MyKafkaUtil.getKafkaSink("dwd_traffic_page_log"));
-        startDS.sinkTo(MyKafkaUtil.getKafkaSink("dwd_traffic_start_log"));
+//        pageDS.sinkTo(MyKafkaUtil.getKafkaSink("dwd_traffic_page_log"));
+//        startDS.sinkTo(MyKafkaUtil.getKafkaSink("dwd_traffic_start_log"));
 //        errDS.sinkTo(MyKafkaUtil.getKafkaSink("dwd_traffic_err_log"));
 //        displayDS.sinkTo(MyKafkaUtil.getKafkaSink("dwd_traffic_display_log"));
 //        actionDS.sinkTo(MyKafkaUtil.getKafkaSink("dwd_traffic_action_log"));

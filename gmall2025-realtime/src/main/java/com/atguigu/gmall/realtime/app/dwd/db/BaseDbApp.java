@@ -95,18 +95,18 @@ public class BaseDbApp {
         );
         //TODO 9.将处理后的业务数据发送到kafka的不同的主题中
         realDS.print(">>>>");
-        realDS.sinkTo(
-            MyKafkaUtil.getKafkaSinkBySchema(
-                new KafkaRecordSerializationSchema<JSONObject>() {
-                    @Override
-                    public ProducerRecord<byte[], byte[]> serialize(JSONObject jsonObj, KafkaSinkContext context, Long timestamp) {
-                        String topic = jsonObj.getString("sink_table");
-                        jsonObj.remove("sink_table");
-                        return new ProducerRecord<byte[], byte[]>(topic,jsonObj.toJSONString().getBytes());
-                    }
-                }
-            )
-        );
+//        realDS.sinkTo(
+//            MyKafkaUtil.getKafkaSinkBySchema(
+//                new KafkaRecordSerializationSchema<JSONObject>() {
+//                    @Override
+//                    public ProducerRecord<byte[], byte[]> serialize(JSONObject jsonObj, KafkaSinkContext context, Long timestamp) {
+//                        String topic = jsonObj.getString("sink_table");
+//                        jsonObj.remove("sink_table");
+//                        return new ProducerRecord<byte[], byte[]>(topic,jsonObj.toJSONString().getBytes());
+//                    }
+//                }
+//            )
+//        );
         env.execute();
     }
 }
