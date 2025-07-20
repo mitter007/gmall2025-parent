@@ -1,0 +1,8 @@
+问题1：
+flume是怎么搬运数据的，是当一个文件没有被写入的时候搬运？还是正在写的时候就可以搬了
+问题2：
+bin/kafka-console-consumer.sh --bootstrap-server hadoop202:9092 --topic dwd_cart_info
+运行之后无数据
+往hbase中写 使用幂等保证一致性
+往kafka中写用 2pc保证一致性
+往doris写保证一致性 使用2pc
