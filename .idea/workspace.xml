@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="35ec7170-de92-4f44-be7d-cdb30a87faca" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2ywwd7PsBTJln8dos2VjhQDCglT" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="2" id="Remove" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="flattenModules" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BaseDbApp.executor": "Debug",
+    "Application.DimApp.executor": "Run",
+    "Application.Dwd01_DwdTrafficBaseLogSplit.executor": "Run",
+    "Application.Dwd02_DwdInteractionCommentInfo.executor": "Run",
+    "Application.Dwd03_TradeCartAdd.executor": "Run",
+    "Application.Dwd04_TradeOrderDetail.executor": "Run",
+    "Application.Dwd05_TradeOrderCancelDetail.executor": "Run",
+    "Application.Dwd06_TradePayDetailSuc.executor": "Run",
+    "Application.DwdInteractionCommentInfo.executor": "Run",
+    "Application.DwdTrafficBaseLogSplit.executor": "Run",
+    "Application.FlinkCDC_01_DS.executor": "Run",
+    "Application.FlinkCDC_02_SQL.executor": "Run",
+    "Application.JsonTest.executor": "Run",
+    "Application.KeywordUtil.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.PhoenixUtil.executor": "Run",
+    "Application.Test01_Doris01.executor": "Run",
+    "Application.Test02_Doris_API.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\02_code\gmall2025-parent\gmall2025-realtime\src\main\java\com\atguigu\gmall\realtime\app\dwd" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.atguigu.gmall.realtime.app.utils" />
+      <recent name="com.test" />
+      <recent name="com.atguigu.gmall.realtime.app.bean" />
+      <recent name="com.atguigu.gmall.realtime.app.func" />
+      <recent name="com.atguigu.gmall.realtime.app.dws" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.BaseDbApp">
+    <configuration name="BaseDbApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.app.dwd.db.BaseDbApp" />
+      <module name="gmall2025-realtime" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.gmall.realtime.app.dwd.db.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Dwd01_DwdTrafficBaseLogSplit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.app.dwd.log.Dwd01_DwdTrafficBaseLogSplit" />
+      <module name="gmall2025-realtime" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.gmall.realtime.app.dwd.log.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KeywordUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.app.utils.KeywordUtil" />
+      <module name="gmall2025-realtime" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.gmall.realtime.app.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test01_Doris01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.Test01_Doris01" />
+      <module name="gmall2025-realtime" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test02_Doris_API" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.Test02_Doris_API" />
+      <module name="gmall2025-realtime" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BaseDbApp" />
+        <item itemvalue="Application.Dwd01_DwdTrafficBaseLogSplit" />
+        <item itemvalue="Application.Test01_Doris01" />
+        <item itemvalue="Application.Test02_Doris_API" />
+        <item itemvalue="Application.KeywordUtil" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="35ec7170-de92-4f44-be7d-cdb30a87faca" name="Changes" comment="" />
+      <created>1750759029149</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1750759029149</updated>
+      <workItem from="1750759030242" duration="2244000" />
+      <workItem from="1750845476296" duration="10325000" />
+      <workItem from="1750865071881" duration="1170000" />
+      <workItem from="1750906688014" duration="6186000" />
+      <workItem from="1750925494388" duration="33736000" />
+      <workItem from="1751116011359" duration="10766000" />
+      <workItem from="1751288761466" duration="442000" />
+      <workItem from="1751289231036" duration="262000" />
+      <workItem from="1751290175089" duration="288000" />
+      <workItem from="1751291365796" duration="3208000" />
+      <workItem from="1752808327985" duration="85000" />
+      <workItem from="1752984273367" duration="1884000" />
+    </task>
+    <task id="LOCAL-00001" summary="互动域评论事务事实表">
+      <option name="closed" value="true" />
+      <created>1750928026084</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750928026084</updated>
+    </task>
+    <task id="LOCAL-00002" summary="互动域评论事务事实表(2)">
+      <option name="closed" value="true" />
+      <created>1750932879599</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750932879599</updated>
+    </task>
+    <task id="LOCAL-00003" summary="互动域评论事务事实表(3)">
+      <option name="closed" value="true" />
+      <created>1750932963240</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1750932963240</updated>
+    </task>
+    <task id="LOCAL-00004" summary="交易域加购事实表">
+      <option name="closed" value="true" />
+      <created>1750936595264</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1750936595264</updated>
+    </task>
+    <task id="LOCAL-00005" summary="交易域下单事务事实表">
+      <option name="closed" value="true" />
+      <created>1750937021226</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1750937021226</updated>
+    </task>
+    <task id="LOCAL-00006" summary="dwd">
+      <option name="closed" value="true" />
+      <created>1751027408275</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1751027408275</updated>
+    </task>
+    <task id="LOCAL-00007" summary="dwd(2)">
+      <option name="closed" value="true" />
+      <created>1751027426018</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1751027426018</updated>
+    </task>
+    <task id="LOCAL-00008" summary="dim完成">
+      <option name="closed" value="true" />
+      <created>1751204036882</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1751204036882</updated>
+    </task>
+    <task id="LOCAL-00009" summary="dim完成">
+      <option name="closed" value="true" />
+      <created>1752808339857</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1752808339857</updated>
+    </task>
+    <task id="LOCAL-00010" summary="dim完成">
+      <option name="closed" value="true" />
+      <created>1752997518921</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1752997518921</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="互动域评论事务事实表" />
+    <MESSAGE value="互动域评论事务事实表(2)" />
+    <MESSAGE value="互动域评论事务事实表(3)" />
+    <MESSAGE value="交易域加购事实表" />
+    <MESSAGE value="交易域下单事务事实表" />
+    <MESSAGE value="dwd" />
+    <MESSAGE value="dwd(2)" />
+    <MESSAGE value="dim完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="dim完成" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/gmall2025-realtime/src/main/java/com/atguigu/gmall/realtime/app/func/TableProcessFunction.java</url>
+          <line>144</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
