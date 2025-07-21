@@ -6,14 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="flink-cdc" />
-        <module name="gmall2025-realtime" />
+        <module name="gmall2024-realtime" />
+        <module name="realtime-gmall" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="flink-cdc" target="1.8" />
-      <module name="gmall2025-parent" target="1.8" />
-      <module name="gmall2025-realtime" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
