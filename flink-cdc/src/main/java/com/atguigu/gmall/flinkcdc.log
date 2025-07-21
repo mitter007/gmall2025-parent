@@ -1,0 +1,7 @@
+在 Flink CDC（基于 Debezium）中，每一条变更数据记录（change event）通常会包含一个 "op" 字段，表示当前变更操作的类型。这个字段的值表示的是 数据库操作类型，其含义如下：
+
+"op" 值	含义	说明
+"c"	create（插入）	表示一条 插入（INSERT） 操作
+"u"	update（更新）	表示一条 更新（UPDATE） 操作
+"d"	delete（删除）	表示一条 删除（DELETE） 操作
+"r"	read（快照读）	表示从 初始快照 中读取的数据（用于 initial 模式的 bootstrap）
