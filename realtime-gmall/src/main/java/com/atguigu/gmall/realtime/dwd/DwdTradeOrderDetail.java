@@ -5,6 +5,8 @@ import com.atguigu.gmall.realtime.common.constant.Constant;
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 
+import java.time.Duration;
+
 /**
  * ClassName: DwdTradeOrderDetail
  * Package: com.atguigu.gmall.realtime.dwd
@@ -25,6 +27,10 @@ public class DwdTradeOrderDetail extends BaseSQL {
 
     @Override
     public void handle(StreamTableEnvironment tableEnv) {
+
+        //TODO 设置状态的保留时间[传输的延迟 + 业务上的滞后关系]
+        tableEnv.getConfig().setIdleStateRetention(Duration.ofSeconds(10));
+
         readOdsDb(tableEnv, Constant.TOPIC_DWD_TRADE_ORDER_DETAIL);
         readOrderDetail(tableEnv);
         readOrderInfo(tableEnv);
