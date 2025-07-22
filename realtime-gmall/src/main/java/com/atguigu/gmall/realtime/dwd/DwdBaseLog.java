@@ -22,6 +22,8 @@ import org.apache.flink.util.Collector;
 import org.apache.flink.util.OutputTag;
 
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * ClassName: DwdBaseLog
@@ -140,13 +142,13 @@ public class DwdBaseLog extends BaseApp {
     }
 
     private HashMap<String, DataStream<String>> splitStream(SingleOutputStreamOperator<JSONObject> fixedDS) {
-        OutputTag<String> startTag = new OutputTag<String>("start") {
+        OutputTag<String> startTag = new OutputTag<String>(Constant.TOPIC_DWD_TRAFFIC_START) {
         };
-        OutputTag<String> errTag = new OutputTag<String>("err") {
+        OutputTag<String> errTag = new OutputTag<String>(Constant.TOPIC_DWD_TRAFFIC_ERR) {
         };
-        OutputTag<String> displayTag = new OutputTag<String>("display") {
+        OutputTag<String> displayTag = new OutputTag<String>(Constant.TOPIC_DWD_TRAFFIC_DISPLAY) {
         };
-        OutputTag<String> actionTag = new OutputTag<String>("action") {
+        OutputTag<String> actionTag = new OutputTag<String>(Constant.TOPIC_DWD_TRAFFIC_ACTION) {
         };
 //"{\"actions\":[{\"action_id\":\"favor_add\",\"item\":\"28\",\"item_type\":\"sku_id\",\"ts\":1749489538572},{\"action_id\":\"cart_add\",\"item\":\"28\",\"item_type\":\"sku_id\",\"ts\":1749489541572}],\"common\":{\"ar\":\"21\",\"ba\":\"vivo\",\"ch\":\"xiaomi\",\"is_new\":\"1\",\"md\":\"vivo x90\",\"mid\":\"mid_205\",\"os\":\"Android 13.0\",\"sid\":\"6217a3b7-128e-45c6-9fca-c7a8146e66a3\",\"uid\":\"482\",\"vc\":\"v2.0.1\"},\"displays\":[{\"item\":\"9\",\"item_type\":\"sku_id\",\"pos_id\":4,\"pos_seq\":0},{\"item\":\"32\",\"item_type\":\"sku_id\",\"pos_id\":4,\"pos_seq\":1},{\"item\":\"30\",\"item_type\":\"sku_id\",\"pos_id\":4,\"pos_seq\":2}],\"page\":{\"during_time\":16589,\"from_pos_id\":4,\"from_pos_seq\":3,\"item\":\"28\",\"item_type\":\"sku_id\",\"last_page_id\":\"good_detail\",\"page_id\":\"good_detail\"},\"ts\":1749489536572}"
 
@@ -224,13 +226,13 @@ public class DwdBaseLog extends BaseApp {
     }
 
     private void sinkToKafka(HashMap<String, DataStream<String>> map) {
-//        Set<Map.Entry<String, DataStream<String>>> entries = map.entrySet();
-//        for (Map.Entry<String, DataStream<String>> entry : entries) {
-//            DataStream<String> value = entry.getValue();
-//            value.sinkTo(KafkaUtil.getKafkaSink(Constant.KAFKA_BROKERS, entry.getKey()));
-//        }
+        Set<Map.Entry<String, DataStream<String>>> entries = map.entrySet();
+        for (Map.Entry<String, DataStream<String>> entry : entries) {
+            DataStream<String> value = entry.getValue();
+            value.sinkTo(KafkaUtil.getKafkaSink(entry.getKey()));
+        }
 
-
+/*
         map
                 .get(Constant.TOPIC_DWD_TRAFFIC_PAGE)
                 .sinkTo(KafkaUtil.getKafkaSink(Constant.TOPIC_DWD_TRAFFIC_PAGE));
@@ -245,7 +247,7 @@ public class DwdBaseLog extends BaseApp {
                 .sinkTo(KafkaUtil.getKafkaSink(Constant.TOPIC_DWD_TRAFFIC_DISPLAY));
         map
                 .get(Constant.TOPIC_DWD_TRAFFIC_ACTION)
-                .sinkTo(KafkaUtil.getKafkaSink(Constant.TOPIC_DWD_TRAFFIC_ACTION));
+                .sinkTo(KafkaUtil.getKafkaSink(Constant.TOPIC_DWD_TRAFFIC_ACTION));*/
     }
 
 
