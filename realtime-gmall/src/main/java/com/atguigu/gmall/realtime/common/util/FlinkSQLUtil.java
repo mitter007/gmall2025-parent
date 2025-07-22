@@ -11,7 +11,7 @@ import com.atguigu.gmall.realtime.common.constant.Constant;
  * @Create 2025/7/22 11:14
  * @Version 1.0
  */
-public class SQLUtil {
+public class FlinkSQLUtil {
     public static String getKafkaDDL(String topic, String groupId) {
         return " WITH (\n" +
                 "  'connector' = 'kafka',\n" +
@@ -24,11 +24,11 @@ public class SQLUtil {
 
     }
 
-    public  static String getHBaseDDL(String tableName){
+    public static String getHBaseDDL(String tableName) {
         return " WITH (\n" +
                 "  'connector' = 'hbase-2.2',\n" +
                 "  'zookeeper.quorum' = 'hadoop202:2181,hadoop203:2181,hadoop204:2181',\n" +
-                "  'table-name' = '"+ Constant.HBASE_NAMESPACE +":"+tableName+"',\n" +
+                "  'table-name' = '" + Constant.HBASE_NAMESPACE + ":" + tableName + "',\n" +
 //                下面这几行代码是什么意思
                 " 'lookup.async' = 'true',\n" +
                 " 'lookup.cache' = 'PARTIAL',\n" +
@@ -45,13 +45,17 @@ public class SQLUtil {
         'lookup.partial-cache.expire-after-access' = '1 hour'	缓存访问后过期时间	无	如果缓存 1 小时内没被访问，则过期移除
         */
     }
+
     public static String getUpsertKafkaDDL(String topic) {
         return " WITH (\n" +
                 "  'connector' = 'upsert-kafka',\n" +
                 "  'topic' = '" + topic + "',\n" +
                 "  'properties.bootstrap.servers' = '" + Constant.KAFKA_BROKERS + "',\n" +
+                "  'key.json.ignore-parse-errors' = 'true'," +
+                "  'value.json.ignore-parse-errors' = 'true'," +
                 "  'key.format' = 'json',\n" +
                 "  'value.format' = 'json'\n" +
                 ")";
     }
+
 }
