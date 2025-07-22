@@ -13,14 +13,12 @@ public class Constant {
     public static String KAFKA_BROKERS = "hadoop202:9092,hadoop203:9092,hadoop204:9092";
     public static final String TOPIC_DB = "topic_db";
     public static final String TOPIC_LOG = "topic_log";
-
-
     public static final String MYSQL_HOST = "hadoop202";
     public static final String HBASE_HOST = "hadoop202,hadoop203,hadoop204";
     public static final int MYSQL_PORT = 3306;
     public static final String MYSQL_USER_NAME = "root";
     public static final String MYSQL_PASSWORD = "000000";
-    public static final String HBASE_NAMESPACE = "GMALL2025";
+    public static final String HBASE_NAMESPACE = "realtime2025";
 
     public static final String MYSQL_DRIVER = "com.mysql.cj.jdbc.Driver";
     public static final String MYSQL_URL = "jdbc:mysql://hadoop202:3306?useSSL=false";

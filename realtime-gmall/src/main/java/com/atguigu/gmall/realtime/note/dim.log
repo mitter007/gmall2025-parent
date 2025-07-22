@@ -1,0 +1,31 @@
+scan 'realtime2025:dim_activity_info'
+scan 'realtime2025:dim_activity_rule'
+scan 'realtime2025:dim_activity_sku'
+scan 'realtime2025:dim_base_category1'
+scan 'realtime2025:dim_base_category2'
+scan 'realtime2025:dim_base_category3'
+scan 'realtime2025:dim_base_dic'
+scan 'realtime2025:dim_base_province'
+scan 'realtime2025:dim_base_region'
+scan 'realtime2025:dim_base_trademark'
+scan 'realtime2025:dim_coupon_info'
+scan 'realtime2025:dim_coupon_range'
+scan 'realtime2025:dim_financial_sku_cost'
+scan 'realtime2025:dim_sku_info'
+scan 'realtime2025:dim_spu_info'
+scan 'realtime2025:dim_user_info'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

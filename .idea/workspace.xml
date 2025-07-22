@@ -44,6 +44,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.BaseDbApp.executor": "Debug",
+    "Application.DimApp (1).executor": "Run",
     "Application.DimApp.executor": "Run",
     "Application.Dwd01_DwdTrafficBaseLogSplit.executor": "Run",
     "Application.Dwd02_DwdInteractionCommentInfo.executor": "Run",
@@ -51,6 +52,8 @@
     "Application.Dwd04_TradeOrderDetail.executor": "Run",
     "Application.Dwd05_TradeOrderCancelDetail.executor": "Run",
     "Application.Dwd06_TradePayDetailSuc.executor": "Run",
+    "Application.DwdBaseDb.executor": "Run",
+    "Application.DwdBaseLog.executor": "Run",
     "Application.DwdInteractionCommentInfo.executor": "Run",
     "Application.DwdTrafficBaseLogSplit.executor": "Run",
     "Application.FlinkCDC_01_DS.executor": "Run",
@@ -77,7 +80,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15347019",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "settings.editor.selected.configurable": "editing.templates",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -88,6 +91,9 @@
     ]
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\02_code\gmall2025-parent\realtime-gmall\src\main\resources" />
@@ -100,20 +106,21 @@
       <recent name="D:\02_code\gmall2025-parent\gmall2025-realtime\src\main\java\com\atguigu\gmall\realtime\app\dwd" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.atguigu.gmall.realtime.common.util" />
       <recent name="com.atguigu.gmall.realtime.bean" />
       <recent name="com.atguigu.gmall.realtime.app.utils" />
       <recent name="com.test" />
       <recent name="com.atguigu.gmall.realtime.app.bean" />
-      <recent name="com.atguigu.gmall.realtime.app.func" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FlinkCdcTest">
-    <configuration name="BaseDbApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.app.dwd.db.BaseDbApp" />
-      <module name="gmall2024-realtime" />
+  <component name="RunManager" selected="Application.DwdBaseDb">
+    <configuration name="DimApp (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dim.DimApp" />
+      <module name="realtime-gmall" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.realtime.app.dwd.db.*" />
+          <option name="PATTERN" value="com.atguigu.gmall.realtime.dim.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -121,12 +128,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Dwd01_DwdTrafficBaseLogSplit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.app.dwd.log.Dwd01_DwdTrafficBaseLogSplit" />
-      <module name="gmall2024-realtime" />
+    <configuration name="DimApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dim.DimApp" />
+      <module name="realtime-gmall" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.realtime.app.dwd.log.*" />
+          <option name="PATTERN" value="com.atguigu.gmall.realtime.dim.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DwdBaseDb" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dwd.DwdBaseDb" />
+      <module name="realtime-gmall" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.gmall.realtime.dwd.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DwdBaseLog" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dwd.DwdBaseLog" />
+      <module name="realtime-gmall" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.gmall.realtime.dwd.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -148,46 +184,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test01_Doris01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.test.Test01_Doris01" />
-      <module name="gmall2024-realtime" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test02_Doris_API" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.test.Test02_Doris_API" />
-      <module name="gmall2024-realtime" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.BaseDbApp" />
-      <item itemvalue="Application.Dwd01_DwdTrafficBaseLogSplit" />
+      <item itemvalue="Application.DimApp (1)" />
+      <item itemvalue="Application.DwdBaseDb" />
+      <item itemvalue="Application.DwdBaseLog" />
+      <item itemvalue="Application.DimApp" />
       <item itemvalue="Application.FlinkCdcTest" />
-      <item itemvalue="Application.Test01_Doris01" />
-      <item itemvalue="Application.Test02_Doris_API" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DwdBaseDb" />
+        <item itemvalue="Application.DwdBaseLog" />
+        <item itemvalue="Application.DimApp (1)" />
         <item itemvalue="Application.FlinkCdcTest" />
-        <item itemvalue="Application.BaseDbApp" />
-        <item itemvalue="Application.Dwd01_DwdTrafficBaseLogSplit" />
-        <item itemvalue="Application.Test01_Doris01" />
-        <item itemvalue="Application.Test02_Doris_API" />
+        <item itemvalue="Application.DimApp" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +227,7 @@
       <workItem from="1751291365796" duration="3208000" />
       <workItem from="1752808327985" duration="85000" />
       <workItem from="1752984273367" duration="2148000" />
-      <workItem from="1752997856443" duration="16441000" />
+      <workItem from="1752997856443" duration="37492000" />
     </task>
     <task id="LOCAL-00001" summary="互动域评论事务事实表">
       <option name="closed" value="true" />
@@ -301,7 +317,23 @@
       <option name="project" value="LOCAL" />
       <updated>1752997880110</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="dim层创建">
+      <option name="closed" value="true" />
+      <created>1753068496331</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1753068496331</updated>
+    </task>
+    <task id="LOCAL-00013" summary="dwdbase">
+      <option name="closed" value="true" />
+      <created>1753107920516</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1753107920516</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +360,9 @@
     <MESSAGE value="dwd(2)" />
     <MESSAGE value="dim完成" />
     <MESSAGE value="init2" />
-    <option name="LAST_COMMIT_MESSAGE" value="init2" />
+    <MESSAGE value="dim层创建" />
+    <MESSAGE value="dwdbase" />
+    <option name="LAST_COMMIT_MESSAGE" value="dwdbase" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -337,6 +371,11 @@
           <url>file://$PROJECT_DIR$/gmall2024-realtime/src/main/java/com/atguigu/gmall/realtime/app/func/TableProcessFunction.java</url>
           <line>144</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/realtime-gmall/src/main/java/com/atguigu/gmall/realtime/common/util/HbaseUtil.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

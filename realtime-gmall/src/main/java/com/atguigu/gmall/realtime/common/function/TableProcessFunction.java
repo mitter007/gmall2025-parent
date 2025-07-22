@@ -59,7 +59,7 @@ public class TableProcessFunction extends BroadcastProcessFunction<JSONObject, T
                 || (tableProcessDim = configMap.get(table)) != null) {
             //如果根据表名获取到了对应的配置信息，说明当前处理的是维度数据
 
-//            "data":{"id":5,"login_name":"2c7eysrvb986","nick_name":"康星","passwd":null,"name":"顾淑","phone_num":"13199928898","email":"8clwiw7w9eqn@163.com","head_img":null,"user_level":"1","birthday":"1996-03-08","gender":null,"create_time":"2025-06-08 00:00:00","operate_time":"2025-06-10 00:00:00","status":null}
+//    "data":{"id":5,"login_name":"2c7eysrvb986","nick_name":"康星","passwd":null,"name":"顾淑","phone_num":"13199928898","email":"8clwiw7w9eqn@163.com","head_img":null,"user_level":"1","birthday":"1996-03-08","gender":null,"create_time":"2025-06-08 00:00:00","operate_time":"2025-06-10 00:00:00","status":null}
             // 将维度数据继续向下游传递(只需要传递data属性内容即可)
             JSONObject data = jsonObject.getJSONObject("data");
             String sinkColumns = tableProcessDim.getSinkColumns();

@@ -24,6 +24,8 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.ProcessFunction;
 import org.apache.flink.util.Collector;
 import org.apache.hadoop.hbase.client.Connection;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 /**
  * ClassName: DimApp
@@ -35,6 +37,7 @@ import org.apache.hadoop.hbase.client.Connection;
  * @Version 1.0
  */
 public class DimApp extends BaseApp {
+    private static final Logger logger = LogManager.getLogger(DimApp.class);
 
     public static void main(String[] args) throws Exception {
         new DimApp().start(
@@ -48,13 +51,16 @@ public class DimApp extends BaseApp {
 
     @Override
     public void handle(StreamExecutionEnvironment env, DataStreamSource<String> dataStreamSource) {
+//        主流信息
         SingleOutputStreamOperator<JSONObject> jsonDS = etl(dataStreamSource);
-        //TODO 使用FlinkCDC读取配置表中的配置信息
-        SingleOutputStreamOperator<TableProcessDim> tableProcessDS = readTableProcess(env);
+
+        //TODO 使用FlinkCDC读取配置表中的配置信息  配置流
+        SingleOutputStreamOperator<TableProcessDim> tPDS = readTableProcess(env);
+
         //TODO 根据配置表中的配置信息到HBase中执行建表或者删除表操作
-        createHbaseTable(tableProcessDS);
+        tPDS   = createHbaseTable(tPDS);
         //TODO 过滤维度数据
-        SingleOutputStreamOperator<Tuple2<JSONObject, TableProcessDim>> connectDS = connect(tableProcessDS, jsonDS);
+        SingleOutputStreamOperator<Tuple2<JSONObject, TableProcessDim>> connectDS = connect(tPDS, jsonDS);
         writeToHBase(connectDS);
     }
 
@@ -105,6 +111,7 @@ public class DimApp extends BaseApp {
                 } else {
                     tableProcessDim = jsonObject.getObject("after", TableProcessDim.class);
                 }
+                tableProcessDim.setOp(op);
 
                 return tableProcessDim;
             }
@@ -113,45 +120,46 @@ public class DimApp extends BaseApp {
 
     }
 
-    private static void createHbaseTable(SingleOutputStreamOperator<TableProcessDim> tableProcessDS) {
-        tableProcessDS.map(new RichMapFunction<TableProcessDim, TableProcessDim>() {
-                               private Connection hbaseConn;
+    private static SingleOutputStreamOperator<TableProcessDim> createHbaseTable(SingleOutputStreamOperator<TableProcessDim> tPDS) {
+        tPDS = tPDS.map(new RichMapFunction<TableProcessDim, TableProcessDim>() {
+                            private Connection hbaseConn;
 
-                               @Override
-                               public void open(Configuration parameters) throws Exception {
-                                   hbaseConn = HbaseUtil.getHbaseconnection();
-                               }
+                            @Override
+                            public void open(Configuration parameters) throws Exception {
+                                hbaseConn = HbaseUtil.getHbaseconnection();
+                            }
 
-                               @Override
-                               public TableProcessDim map(TableProcessDim tp) {
-                                   String op = tp.getOp();
-                                   String sourceTable = tp.getSourceTable();
-                                   String sinkTable = tp.getSinkTable();
-                                   //获取在HBase中建表的列族
-                                   String[] sinkFamilies = tp.getSinkFamily().split(",");
-                                   if (op.equals("d")) {
-                                       HbaseUtil.dropHBaseTable(hbaseConn, Constant.HBASE_NAMESPACE, sinkTable);
-                                   } else if ("r".equals(op)) {
-                                       //从配置表中读取了一条数据或者向配置表中添加了一条配置   在hbase中执行建表
-                                       HbaseUtil.createHBaseTable(hbaseConn, Constant.HBASE_NAMESPACE, sinkTable, sinkFamilies);
+                            @Override
+                            public TableProcessDim map(TableProcessDim tp) {
+                                String op = tp.getOp();
+                                String sourceTable = tp.getSourceTable();
+                                String sinkTable = tp.getSinkTable();
+                                //获取在HBase中建表的列族
+                                String[] sinkFamilies = tp.getSinkFamily().split(",");
+                                if ("d".equals(op)) {
+                                    HbaseUtil.dropHBaseTable(hbaseConn, Constant.HBASE_NAMESPACE, sinkTable);
+                                } else if ("r".equals(op)) {
+                                    //从配置表中读取了一条数据或者向配置表中添加了一条配置   在hbase中执行建表
+                                    HbaseUtil.createHBaseTable(hbaseConn, Constant.HBASE_NAMESPACE, sinkTable, sinkFamilies);
 
-                                   } else {
-                                       //对配置表中的配置信息进行了修改   先从hbase中将对应的表删除掉，再创建新表
-                                       HbaseUtil.dropHBaseTable(hbaseConn, Constant.HBASE_NAMESPACE, sinkTable);
-                                       HbaseUtil.createHBaseTable(hbaseConn, Constant.HBASE_NAMESPACE, sinkTable, sinkFamilies);
-                                   }
-                                   return tp;
+                                } else {
+                                    //对配置表中的配置信息进行了修改   先从hbase中将对应的表删除掉，再创建新表
+                                    HbaseUtil.dropHBaseTable(hbaseConn, Constant.HBASE_NAMESPACE, sinkTable);
+                                    HbaseUtil.createHBaseTable(hbaseConn, Constant.HBASE_NAMESPACE, sinkTable, sinkFamilies);
+                                }
+                                return tp;
 
 
-                               }
+                            }
 
-                               @Override
-                               public void close() throws Exception {
-                                   hbaseConn.close();
-                               }
-                           }
-        ).setParallelism(1)
-        ;
+                            @Override
+                            public void close() throws Exception {
+                                hbaseConn.close();
+                            }
+                        }
+        ).setParallelism(1);
+        return tPDS;
+
 
     }
 
