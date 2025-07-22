@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/flink-cdc/flink-cdc.iml" filepath="$PROJECT_DIR$/flink-cdc/flink-cdc.iml" />
-      <module fileurl="file://$PROJECT_DIR$/gmall2025-realtime/gmall2024-realtime.iml" filepath="$PROJECT_DIR$/gmall2025-realtime/gmall2024-realtime.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall2025-parent.iml" filepath="$PROJECT_DIR$/gmall2025-parent.iml" />
     </modules>
   </component>

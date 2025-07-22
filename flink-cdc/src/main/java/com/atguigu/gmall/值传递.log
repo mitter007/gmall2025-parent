@@ -1,0 +1,39 @@
+
+
+这是一个关于**Java 值传递（pass-by-value）**和对象引用的经典问题。
+
+我们分开解释你提到的两个问题：Java 中所有参数传递都是值传递（pass-by-value）：
+
+String a="123"，String b="aaa" 是两个指向字符串常量的引用。
+
+当你调用 swit(a, b) 时，传入的是引用的副本。也就是说，方法中的 a 和 b 是原始变量的“拷贝指针”，它们的改变不会影响方法外的 a 和 b。
+
+换句话说：换句话说：
+
+     在 swit 方法里你交换的是两个引用变量的副本，原始的 a 和 b 没有被修改。
+
+     ✅ 如果你想交换方法外部的变量，需要使用封装类（比如 AtomicReference<String> 或自定义的容器对象）来实现引用共享。
+
+✅为什么 jsonObject 的值变了？
+你执行了：
+
+java
+复制
+编辑
+deleteNotNeedColumns(jsonObject,"entry,open_ad_ms");
+这里 jsonObject 是一个 可变对象（Mutable Object，JSONObject 来自 fastjson），传递给方法的是这个对象的引用的拷贝。
+
+虽然是“引用的拷贝”，但你操作的是同一个对象，所以对这个对象的属性进行修改，在方法外部也会反映出来。
+
+java
+复制
+编辑
+Set<Map.Entry<String, Object>> entrySet = dataJsonObj.entrySet();
+entrySet.removeIf(entry -> !columnList.contains(entry.getKey()));
+这段代码是直接修改了传入的 jsonObject 内部的键值对。
+
+总结表格：
+类型	是否可变	方法内修改是否影响原始值？	示例
+基本数据类型（int, double...）	不可变	❌	int a = 1;
+String	不可变	❌	String a = "abc";
+对象（如 JSONObject）	可变	✅（修改属性会变）	JSONObject json

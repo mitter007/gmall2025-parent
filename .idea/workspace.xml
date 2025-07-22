@@ -60,18 +60,21 @@
     "Application.FlinkCDC_02_SQL.executor": "Run",
     "Application.FlinkCdcTest.executor": "Run",
     "Application.JsonTest.executor": "Run",
+    "Application.KafkaMain.executor": "Run",
     "Application.KeywordUtil.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.PhoenixUtil.executor": "Run",
     "Application.Test01_Doris01.executor": "Run",
     "Application.Test02_Doris_API.executor": "Run",
+    "Application.Wrapper.executor": "Run",
+    "Application.testString.executor": "Run",
     "Maven.gmall2025-realtime [clean].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "1.8.0_271",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/02_code/gmall2025-parent/realtime-gmall/src/main/resources",
+    "last_opened_file_path": "D:/02_code/gmall2025-parent/kafka-study/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -85,7 +88,6 @@
   },
   "keyToStringList": {
     "GitStage.ChangesTree.GroupingKeys": [
-      "directory",
       "module",
       "repository"
     ]
@@ -96,11 +98,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\02_code\gmall2025-parent\kafka-study\src\main\resources" />
       <recent name="D:\02_code\gmall2025-parent\realtime-gmall\src\main\resources" />
       <recent name="D:\02_code\gmall2025-parent\gmall2025-realtime\src\main\java\realtime" />
       <recent name="D:\02_code\gmall2025-parent\flink-cdc" />
       <recent name="D:\02_code\gmall2025-parent\gmall2025-realtime" />
-      <recent name="D:\02_code\gmall2025-parent\gmall2025-realtime\src\main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\02_code\gmall2025-parent\gmall2025-realtime\src\main\java\com\atguigu\gmall\realtime\app\dwd" />
@@ -114,34 +116,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.DwdBaseDb">
-    <configuration name="DimApp (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dim.DimApp" />
-      <module name="realtime-gmall" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.realtime.dim.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DimApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dim.DimApp" />
-      <module name="realtime-gmall" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.realtime.dim.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DwdBaseDb" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dwd.DwdBaseDb" />
@@ -170,9 +144,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlinkCdcTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="KafkaMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.FlinkCdcTest" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.KafkaMain" />
+      <module name="kafka-study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Wrapper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.Wrapper" />
       <module name="flink-cdc" />
       <extension name="coverage">
         <pattern>
@@ -190,20 +178,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="testString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.testString" />
+      <module name="flink-cdc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.gmall.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.DimApp (1)" />
+      <item itemvalue="Application.KafkaMain" />
+      <item itemvalue="Application.Wrapper" />
+      <item itemvalue="Application.testString" />
       <item itemvalue="Application.DwdBaseDb" />
       <item itemvalue="Application.DwdBaseLog" />
-      <item itemvalue="Application.DimApp" />
-      <item itemvalue="Application.FlinkCdcTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.DwdBaseDb" />
+        <item itemvalue="Application.KafkaMain" />
+        <item itemvalue="Application.Wrapper" />
+        <item itemvalue="Application.testString" />
         <item itemvalue="Application.DwdBaseLog" />
-        <item itemvalue="Application.DimApp (1)" />
-        <item itemvalue="Application.FlinkCdcTest" />
-        <item itemvalue="Application.DimApp" />
       </list>
     </recent_temporary>
   </component>
@@ -228,6 +230,7 @@
       <workItem from="1752808327985" duration="85000" />
       <workItem from="1752984273367" duration="2148000" />
       <workItem from="1752997856443" duration="37492000" />
+      <workItem from="1753148321844" duration="4481000" />
     </task>
     <task id="LOCAL-00001" summary="互动域评论事务事实表">
       <option name="closed" value="true" />
@@ -333,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753107920516</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="20250722-init">
+      <option name="closed" value="true" />
+      <created>1753147485431</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1753147485431</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +373,8 @@
     <MESSAGE value="init2" />
     <MESSAGE value="dim层创建" />
     <MESSAGE value="dwdbase" />
-    <option name="LAST_COMMIT_MESSAGE" value="dwdbase" />
+    <MESSAGE value="20250722-init" />
+    <option name="LAST_COMMIT_MESSAGE" value="20250722-init" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

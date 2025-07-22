@@ -1,18 +1,23 @@
 package com.atguigu.gmall.realtime.common.util;
 
 
+import com.alibaba.fastjson.JSONObject;
+import com.atguigu.gmall.realtime.bean.TableProcessDwd;
 import com.atguigu.gmall.realtime.common.constant.Constant;
 import org.apache.flink.api.common.eventtime.WatermarkStrategy;
 import org.apache.flink.api.common.serialization.DeserializationSchema;
 import org.apache.flink.api.common.serialization.SimpleStringSchema;
 import org.apache.flink.api.common.typeinfo.TypeInformation;
+import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.connector.base.DeliveryGuarantee;
 import org.apache.flink.connector.kafka.sink.KafkaRecordSerializationSchema;
 import org.apache.flink.connector.kafka.sink.KafkaSink;
 import org.apache.flink.connector.kafka.source.KafkaSource;
 import org.apache.flink.connector.kafka.source.enumerator.initializer.OffsetsInitializer;
 import org.apache.kafka.clients.producer.ProducerConfig;
+import org.apache.kafka.clients.producer.ProducerRecord;
 
+import javax.annotation.Nullable;
 import java.io.IOException;
 
 
@@ -84,4 +89,31 @@ public class KafkaUtil {
 
     }
 
+    public static KafkaSink<Tuple2<JSONObject, TableProcessDwd>> getKafkaSink() {
+        KafkaSink<Tuple2<JSONObject, TableProcessDwd>> sink = KafkaSink.<Tuple2<JSONObject, TableProcessDwd>>builder()
+                .setBootstrapServers(Constant.KAFKA_BROKERS)
+                .setRecordSerializer(
+                        new KafkaRecordSerializationSchema<Tuple2<JSONObject, TableProcessDwd>>() {
+                            @Nullable
+                            @Override
+                            public ProducerRecord<byte[], byte[]> serialize(Tuple2<JSONObject, TableProcessDwd> element, KafkaSinkContext context, Long timestamp) {
+                                String sinkTable = element.f1.getSinkTable();
+                                System.out.println("sinkTable:"+sinkTable);
+                                return new ProducerRecord<byte[], byte[]>(sinkTable, element.f0.toJSONString().getBytes());
+
+
+                            }
+                        }
+                )
+                //当前配置决定是否开启事务，保证写到kafka数据的精准一次
+/*                .setDeliveryGuarantee(DeliveryGuarantee.AT_LEAST_ONCE)
+                //设置事务Id的前缀
+                .setTransactionalIdPrefix("dwd_base_log_")
+                //设置事务的超时时间   检查点超时时间 <     事务的超时时间 <=事务最大超时时间
+                .setProperty(ProducerConfig.TRANSACTION_TIMEOUT_CONFIG,15*60*1000+"")*/
+                .build();
+
+        return sink;
+
+    }
 }

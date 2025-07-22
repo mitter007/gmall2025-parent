@@ -12,6 +12,7 @@
         <module>flink-cdc</module>
         <module>gmall2024-realtime</module>
         <module>realtime-gmall</module>
+        <module>kafka-study</module>
     </modules>
 
 
