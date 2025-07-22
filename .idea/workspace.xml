@@ -54,7 +54,9 @@
     "Application.Dwd06_TradePayDetailSuc.executor": "Run",
     "Application.DwdBaseDb.executor": "Run",
     "Application.DwdBaseLog.executor": "Run",
+    "Application.DwdCartAddInfo.executor": "Run",
     "Application.DwdInteractionCommentInfo.executor": "Run",
+    "Application.DwdTradeOrderDetail.executor": "Run",
     "Application.DwdTrafficBaseLogSplit.executor": "Run",
     "Application.FlinkCDC_01_DS.executor": "Run",
     "Application.FlinkCDC_02_SQL.executor": "Run",
@@ -69,6 +71,7 @@
     "Application.Wrapper.executor": "Run",
     "Application.testString.executor": "Run",
     "Maven.gmall2025-realtime [clean].executor": "Run",
+    "Maven.realtime-gmall [clean].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -108,14 +111,14 @@
       <recent name="D:\02_code\gmall2025-parent\gmall2025-realtime\src\main\java\com\atguigu\gmall\realtime\app\dwd" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.atguigu.gmall.realtime.dwd" />
       <recent name="com.atguigu.gmall.realtime.common.util" />
       <recent name="com.atguigu.gmall.realtime.bean" />
       <recent name="com.atguigu.gmall.realtime.app.utils" />
       <recent name="com.test" />
-      <recent name="com.atguigu.gmall.realtime.app.bean" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DwdInteractionCommentInfo">
+  <component name="RunManager" selected="Application.DwdTradeOrderDetail">
     <configuration name="DwdBaseDb" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dwd.DwdBaseDb" />
@@ -144,6 +147,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DwdCartAddInfo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dwd.DwdCartAddInfo" />
+      <module name="realtime-gmall" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.gmall.realtime.dwd.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DwdInteractionCommentInfo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dwd.DwdInteractionCommentInfo" />
@@ -158,27 +175,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KafkaMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="DwdTradeOrderDetail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.KafkaMain" />
-      <module name="kafka-study" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dwd.DwdTradeOrderDetail" />
+      <module name="realtime-gmall" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.atguigu.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Wrapper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.Wrapper" />
-      <module name="flink-cdc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.*" />
+          <option name="PATTERN" value="com.atguigu.gmall.realtime.dwd.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -193,19 +196,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.DwdCartAddInfo" />
       <item itemvalue="Application.DwdInteractionCommentInfo" />
-      <item itemvalue="Application.KafkaMain" />
-      <item itemvalue="Application.Wrapper" />
+      <item itemvalue="Application.DwdTradeOrderDetail" />
       <item itemvalue="Application.DwdBaseDb" />
       <item itemvalue="Application.DwdBaseLog" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DwdTradeOrderDetail" />
+        <item itemvalue="Application.DwdCartAddInfo" />
         <item itemvalue="Application.DwdInteractionCommentInfo" />
         <item itemvalue="Application.DwdBaseLog" />
         <item itemvalue="Application.DwdBaseDb" />
-        <item itemvalue="Application.KafkaMain" />
-        <item itemvalue="Application.Wrapper" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +233,7 @@
       <workItem from="1752808327985" duration="85000" />
       <workItem from="1752984273367" duration="2148000" />
       <workItem from="1752997856443" duration="37492000" />
-      <workItem from="1753148321844" duration="11089000" />
+      <workItem from="1753148321844" duration="19128000" />
     </task>
     <task id="LOCAL-00001" summary="互动域评论事务事实表">
       <option name="closed" value="true" />
@@ -368,7 +371,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753167378487</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="target">
+      <option name="closed" value="true" />
+      <created>1753168895548</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1753168895548</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,7 +411,8 @@
     <MESSAGE value="20250722-init" />
     <MESSAGE value="DwdBaseDb" />
     <MESSAGE value="base" />
-    <option name="LAST_COMMIT_MESSAGE" value="base" />
+    <MESSAGE value="target" />
+    <option name="LAST_COMMIT_MESSAGE" value="target" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,7 +1,7 @@
 package com.atguigu.gmall.realtime.common.base;
 
 import com.atguigu.gmall.realtime.common.constant.Constant;
-import com.atguigu.gmall.realtime.common.util.SQLUtil;
+import com.atguigu.gmall.realtime.common.util.FlinkSQLUtil;
 import org.apache.flink.api.common.restartstrategy.RestartStrategies;
 import org.apache.flink.api.common.time.Time;
 import org.apache.flink.configuration.Configuration;
@@ -32,7 +32,7 @@ public abstract class BaseSQL {
         //1.3 指定表执行环境
         StreamTableEnvironment tableEnv = StreamTableEnvironment.create(env);
         //TODO 2.检查点相关的设置
-        env.enableCheckpointing(5000L, CheckpointingMode.EXACTLY_ONCE);
+        env.enableCheckpointing(20*1000L, CheckpointingMode.EXACTLY_ONCE);
         env.setRestartStrategy(RestartStrategies.failureRateRestart(3, Time.days(30), Time.seconds(3)));
 
   /*      //2.1 开启检查点
@@ -69,7 +69,7 @@ public abstract class BaseSQL {
                 "  pt as proctime(),\n" +
                 "  et as to_timestamp_ltz(ts, 0), " +
                 "  watermark for et as et - interval '3' second " +
-                ") " + SQLUtil.getKafkaDDL(Constant.TOPIC_DB, groupId));
+                ") " + FlinkSQLUtil.getKafkaDDL(Constant.TOPIC_DB, groupId));
 //        tableEnv.executeSql("select * from topic_db").print();
     }
 
@@ -78,7 +78,7 @@ public abstract class BaseSQL {
                 " dic_code string,\n" +
                 " info ROW<dic_name string>,\n" +
                 " PRIMARY KEY (dic_code) NOT ENFORCED\n" +
-                ") " + SQLUtil.getHBaseDDL("dim_base_dic");
+                ") " + FlinkSQLUtil.getHBaseDDL("dim_base_dic");
         tableEnv.executeSql(s);
 
 

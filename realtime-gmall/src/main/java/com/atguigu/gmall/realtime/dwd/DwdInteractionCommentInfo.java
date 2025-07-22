@@ -2,7 +2,7 @@ package com.atguigu.gmall.realtime.dwd;
 
 import com.atguigu.gmall.realtime.common.base.BaseSQL;
 import com.atguigu.gmall.realtime.common.constant.Constant;
-import com.atguigu.gmall.realtime.common.util.SQLUtil;
+import com.atguigu.gmall.realtime.common.util.FlinkSQLUtil;
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 
@@ -67,7 +67,7 @@ public class DwdInteractionCommentInfo extends BaseSQL {
                 "    comment_txt string,\n" +
                 "    ts bigint,\n" +
                 "    PRIMARY KEY (id) NOT ENFORCED\n" +
-                ") " + SQLUtil.getUpsertKafkaDDL(Constant.TOPIC_DWD_INTERACTION_COMMENT_INFO));
+                ") " + FlinkSQLUtil.getUpsertKafkaDDL(Constant.TOPIC_DWD_INTERACTION_COMMENT_INFO));
         // 写入
         tableEnv.executeSql("insert into " + Constant.TOPIC_DWD_INTERACTION_COMMENT_INFO + " select * from joined_Table");
 
