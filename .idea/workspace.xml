@@ -104,6 +104,7 @@
       <recent name="D:\02_code\gmall2025-parent\gmall2025-realtime" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\02_code\gmall2025-parent\kafka-study\target\generated-sources" />
       <recent name="D:\02_code\gmall2025-parent\gmall2025-realtime\src\main\java\com\atguigu\gmall\realtime\app\dwd" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -229,7 +230,7 @@
       <workItem from="1752808327985" duration="85000" />
       <workItem from="1752984273367" duration="2148000" />
       <workItem from="1752997856443" duration="37492000" />
-      <workItem from="1753148321844" duration="10084000" />
+      <workItem from="1753148321844" duration="11089000" />
     </task>
     <task id="LOCAL-00001" summary="互动域评论事务事实表">
       <option name="closed" value="true" />
@@ -351,7 +352,23 @@
       <option name="project" value="LOCAL" />
       <updated>1753153242692</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="base">
+      <option name="closed" value="true" />
+      <created>1753167347833</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1753167347833</updated>
+    </task>
+    <task id="LOCAL-00017" summary="base">
+      <option name="closed" value="true" />
+      <created>1753167378487</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1753167378487</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +399,8 @@
     <MESSAGE value="dwdbase" />
     <MESSAGE value="20250722-init" />
     <MESSAGE value="DwdBaseDb" />
-    <option name="LAST_COMMIT_MESSAGE" value="DwdBaseDb" />
+    <MESSAGE value="base" />
+    <option name="LAST_COMMIT_MESSAGE" value="base" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

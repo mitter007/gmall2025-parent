@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="gmall2024-realtime" />
         <module name="kafka-study" />
         <module name="realtime-gmall" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="gmall2024-realtime" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

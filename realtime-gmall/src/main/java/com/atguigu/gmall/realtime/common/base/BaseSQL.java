@@ -79,7 +79,6 @@ public abstract class BaseSQL {
                 " info ROW<dic_name string>,\n" +
                 " PRIMARY KEY (dic_code) NOT ENFORCED\n" +
                 ") " + SQLUtil.getHBaseDDL("dim_base_dic");
-        System.out.println(s);
         tableEnv.executeSql(s);
 
 

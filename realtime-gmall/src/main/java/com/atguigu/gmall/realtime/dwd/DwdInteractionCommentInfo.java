@@ -15,7 +15,7 @@ import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
  * @Create 2025/7/22 11:12
  * @Version 1.0
  */
-public class DwdInteractionCommentInfo  extends BaseSQL {
+public class DwdInteractionCommentInfo extends BaseSQL {
     public static void main(String[] args) {
         new DwdInteractionCommentInfo().start(
                 1004,
@@ -23,6 +23,7 @@ public class DwdInteractionCommentInfo  extends BaseSQL {
                 null
         );
     }
+
     @Override
     public void handle(StreamTableEnvironment tableEnv) {
         //TODO 从kafka的topic_db主题中读取数据 创建动态表       ---kafka连接器
@@ -54,9 +55,10 @@ public class DwdInteractionCommentInfo  extends BaseSQL {
                 "  JOIN base_dic FOR SYSTEM_TIME AS OF c.pt AS dic\n" +
                 "    ON c.appraise = dic.dic_code");
 //        joinedTable.execute().print();
+        tableEnv.createTemporaryView("joined_Table", joinedTable);
         //TODO 将关联的结果写到kafka主题中                    ---upsert kafka连接器
         //创建动态表和要写入的主题进行映射
-        tableEnv.executeSql("CREATE TABLE "+Constant.TOPIC_DWD_INTERACTION_COMMENT_INFO+" (\n" +
+        tableEnv.executeSql("CREATE TABLE " + Constant.TOPIC_DWD_INTERACTION_COMMENT_INFO + " (\n" +
                 "    id string,\n" +
                 "    user_id string,\n" +
                 "    sku_id string,\n" +
@@ -67,7 +69,7 @@ public class DwdInteractionCommentInfo  extends BaseSQL {
                 "    PRIMARY KEY (id) NOT ENFORCED\n" +
                 ") " + SQLUtil.getUpsertKafkaDDL(Constant.TOPIC_DWD_INTERACTION_COMMENT_INFO));
         // 写入
-
+        tableEnv.executeSql("insert into " + Constant.TOPIC_DWD_INTERACTION_COMMENT_INFO + " select * from joined_Table");
 
     }
 }

@@ -1,0 +1,29 @@
+"    `data`['id'] id,\n" +
+"    `data`['user_id'] user_id,\n" +
+"    `data`['sku_id'] sku_id,\n" +
+"    `data`['cart_price'] cart_price,\n" +
+"    `data`['sku_num'] sku_num,\n" +
+"    `data`['img_url'] img_url,\n" +
+"    `data`['sku_name'] sku_name,\n" +
+"    `data`['is_checked'] is_checked,\n" +
+"    `data`['create_time'] create_time,\n" +
+"    `data`['operate_time'] operate_time,\n" +
+"    `data`['is_ordered'] is_ordered,\n" +
+"    `data`['order_time'] order_time,\n" +
+"    `data`['source_type'] source_type,\n" +
+
+		"id": 259159,
+		"user_id": "464",
+		"sku_id": 19,
+		"cart_price": 11999.0,
+		"sku_num": 1,
+		"img_url": null,
+		"sku_name": "TCL 85Q6 85英寸 巨幕私人影院电视 4K超高清 AI智慧屏 全景全面屏 MEMC运动防抖 2+16GB 液晶平板电视机",
+		"is_checked": null,
+		"create_time": "2025-06-11 21:01:02",
+		"operate_time": "2025-06-11 21:01:32",
+		"is_ordered": 1,
+		"order_time": "2025-06-11 21:01:32",
+		"source_type": null,
+		"source_id": null
+	},
