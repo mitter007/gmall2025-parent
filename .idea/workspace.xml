@@ -62,6 +62,7 @@
     "Application.DwdTradeOrderCancelDetail.executor": "Run",
     "Application.DwdTradeOrderDetail.executor": "Run",
     "Application.DwdTradeOrderPaySucDetail.executor": "Run",
+    "Application.DwdTradeOrderRefund.executor": "Run",
     "Application.DwdTrafficBaseLogSplit.executor": "Run",
     "Application.FlinkCDC_01_DS.executor": "Run",
     "Application.FlinkCDC_02_SQL.executor": "Run",
@@ -123,21 +124,7 @@
       <recent name="com.test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DwdTradeOrderDetail">
-    <configuration name="DwdCartAddInfo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dwd.DwdCartAddInfo" />
-      <module name="realtime-gmall" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.realtime.dwd.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.DwdTradeOrderRefund">
     <configuration name="DwdInteractionCommentInfo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dwd.DwdInteractionCommentInfo" />
@@ -194,6 +181,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DwdTradeOrderRefund" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dwd.DwdTradeOrderRefund" />
+      <module name="realtime-gmall" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.gmall.realtime.dwd.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <method v="2">
@@ -202,18 +203,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.DwdTradeOrderPaySucDetail" />
+      <item itemvalue="Application.DwdTradeOrderRefund" />
       <item itemvalue="Application.DwdTradeOrderCancelDetail" />
-      <item itemvalue="Application.DwdCartAddInfo" />
       <item itemvalue="Application.DwdInteractionCommentInfo" />
       <item itemvalue="Application.DwdTradeOrderDetail" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DwdTradeOrderRefund" />
         <item itemvalue="Application.DwdTradeOrderPaySucDetail" />
         <item itemvalue="Application.DwdTradeOrderDetail" />
         <item itemvalue="Application.DwdTradeOrderCancelDetail" />
         <item itemvalue="Application.DwdInteractionCommentInfo" />
-        <item itemvalue="Application.DwdCartAddInfo" />
       </list>
     </recent_temporary>
   </component>
@@ -241,7 +242,7 @@
       <workItem from="1753148321844" duration="22530000" />
       <workItem from="1753190591578" duration="5518000" />
       <workItem from="1753263617442" duration="901000" />
-      <workItem from="1753264543141" duration="4270000" />
+      <workItem from="1753264543141" duration="8680000" />
     </task>
     <task id="LOCAL-00001" summary="互动域评论事务事实表">
       <option name="closed" value="true" />
@@ -419,7 +420,23 @@
       <option name="project" value="LOCAL" />
       <updated>1753194584679</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="支付成功详情表">
+      <option name="closed" value="true" />
+      <created>1753318143052</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1753318143052</updated>
+    </task>
+    <task id="LOCAL-00024" summary="1">
+      <option name="closed" value="true" />
+      <created>1753318162509</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1753318162509</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +473,9 @@
     <MESSAGE value="DwdTradeOrderDetail" />
     <MESSAGE value="设置状态的保留时间" />
     <MESSAGE value="cancel 订单事实表" />
-    <option name="LAST_COMMIT_MESSAGE" value="cancel 订单事实表" />
+    <MESSAGE value="支付成功详情表" />
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

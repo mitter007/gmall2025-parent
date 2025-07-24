@@ -63,9 +63,9 @@ public abstract class BaseSQL {
                 "  `database` string,\n" +
                 "  `table` string,\n" +
                 "  `type` string,\n" +
-                "  `ts` bigint,\n" +
                 "  `data` MAP<string, string>,\n" +
                 "  `old` MAP<string, string>,\n" +
+                "  `ts` bigint,\n" +
                 "  pt as proctime(),\n" +
                 "  et as to_timestamp_ltz(ts, 0), " +
                 "  watermark for et as et - interval '3' second " +
