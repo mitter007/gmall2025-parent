@@ -115,6 +115,7 @@ public class DwsTrafficVcChArIsNewPageViewWindow extends BaseApp {
                             }
                         }));
 
+
         //TODO 5.分组--按照统计的维度进行分组 怎么是这样分组的 按照统计粒度分组
         KeyedStream<TrafficPageViewBean, Tuple4<String, String, String, String>> tuple4KeyedStream = watermarkDS.keyBy(
                 new KeySelector<TrafficPageViewBean, Tuple4<String, String, String, String>>() {
