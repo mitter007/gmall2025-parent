@@ -1,4 +1,4 @@
-package com.atguigu.gmall.realtime.dws.util;
+package com.atguigu.gmall.realtime.common.util;
 
 import org.wltea.analyzer.core.IKSegmenter;
 import org.wltea.analyzer.core.Lexeme;

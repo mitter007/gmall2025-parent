@@ -3,7 +3,7 @@ package com.atguigu.gmall.realtime.dws.app;
 import com.atguigu.gmall.realtime.common.base.BaseSQL;
 import com.atguigu.gmall.realtime.common.constant.Constant;
 import com.atguigu.gmall.realtime.common.util.FlinkSQLUtil;
-import com.atguigu.gmall.realtime.dws.function.KeywordUDTF;
+import com.atguigu.gmall.realtime.common.function.KeywordUDTF;
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 

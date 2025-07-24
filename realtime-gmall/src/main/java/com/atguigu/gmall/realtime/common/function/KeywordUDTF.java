@@ -1,6 +1,6 @@
-package com.atguigu.gmall.realtime.dws.function;
+package com.atguigu.gmall.realtime.common.function;
 
-import com.atguigu.gmall.realtime.dws.util.IkUtil;
+import com.atguigu.gmall.realtime.common.util.IkUtil;
 import org.apache.flink.table.annotation.DataTypeHint;
 import org.apache.flink.table.annotation.FunctionHint;
 import org.apache.flink.table.functions.TableFunction;

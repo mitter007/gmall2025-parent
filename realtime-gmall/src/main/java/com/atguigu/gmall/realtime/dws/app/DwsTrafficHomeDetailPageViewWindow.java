@@ -6,30 +6,22 @@ import com.atguigu.gmall.realtime.common.base.BaseApp;
 import com.atguigu.gmall.realtime.common.constant.Constant;
 import com.atguigu.gmall.realtime.common.util.DateFormatUtil;
 import com.atguigu.gmall.realtime.common.util.FlinkSinkUtil;
-import com.atguigu.gmall.realtime.dws.bean.TrafficHomeDetailPageViewBean;
-import com.atguigu.gmall.realtime.dws.bean.TrafficPageViewBean;
-import com.atguigu.gmall.realtime.dws.function.BeanToJsonStrMapFunction;
+import com.atguigu.gmall.realtime.bean.TrafficHomeDetailPageViewBean;
+import com.atguigu.gmall.realtime.common.function.BeanToJsonStrMapFunction;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.flink.api.common.eventtime.SerializableTimestampAssigner;
 import org.apache.flink.api.common.eventtime.WatermarkStrategy;
 import org.apache.flink.api.common.functions.FilterFunction;
-import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.api.common.functions.ReduceFunction;
 import org.apache.flink.api.common.state.*;
-import org.apache.flink.api.java.functions.KeySelector;
-import org.apache.flink.api.java.tuple.Tuple4;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.datastream.*;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.ProcessFunction;
 import org.apache.flink.streaming.api.functions.windowing.AllWindowFunction;
-import org.apache.flink.streaming.api.functions.windowing.WindowFunction;
 import org.apache.flink.streaming.api.windowing.assigners.TumblingEventTimeWindows;
-import org.apache.flink.streaming.api.windowing.time.Time;
 import org.apache.flink.streaming.api.windowing.windows.TimeWindow;
 import org.apache.flink.util.Collector;
-
-import java.util.Map;
 
 
 /**

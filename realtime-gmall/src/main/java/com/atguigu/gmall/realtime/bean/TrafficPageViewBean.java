@@ -1,4 +1,4 @@
-package com.atguigu.gmall.realtime.dws.bean;
+package com.atguigu.gmall.realtime.bean;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.AllArgsConstructor;
