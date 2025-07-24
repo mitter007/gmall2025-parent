@@ -2,24 +2,20 @@ package com.atguigu.gmall.realtime.dwd;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.atguigu.gmall.realtime.bean.TableProcessDim;
 import com.atguigu.gmall.realtime.bean.TableProcessDwd;
 import com.atguigu.gmall.realtime.common.base.BaseApp;
 import com.atguigu.gmall.realtime.common.constant.Constant;
 import com.atguigu.gmall.realtime.common.function.BaseDbTableProcessFunction;
 import com.atguigu.gmall.realtime.common.util.FlinkSourceUtil;
-import com.atguigu.gmall.realtime.common.util.KafkaUtil;
-import com.atguigu.gmall.realtime.dim.DimApp;
+import com.atguigu.gmall.realtime.common.util.FlinkSinkUtil;
 import com.ververica.cdc.connectors.mysql.source.MySqlSource;
 import org.apache.flink.api.common.eventtime.WatermarkStrategy;
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.api.common.state.MapStateDescriptor;
 import org.apache.flink.api.java.tuple.Tuple2;
-import org.apache.flink.connector.kafka.sink.KafkaSink;
 import org.apache.flink.streaming.api.datastream.*;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.ProcessFunction;
-import org.apache.flink.streaming.api.functions.co.BroadcastProcessFunction;
 import org.apache.flink.util.Collector;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -105,7 +101,7 @@ public class DwdBaseDb extends BaseApp {
     }
 
     private static void sinkToKafka(SingleOutputStreamOperator<Tuple2<JSONObject, TableProcessDwd>> tup2DS) {
-        tup2DS.sinkTo(KafkaUtil.getKafkaSink());
+        tup2DS.sinkTo(FlinkSinkUtil.getKafkaSink());
     }
 
 

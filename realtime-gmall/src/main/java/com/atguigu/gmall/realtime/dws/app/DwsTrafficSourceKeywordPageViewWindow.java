@@ -1,4 +1,4 @@
-package com.atguigu.gmall.realtime.dws;
+package com.atguigu.gmall.realtime.dws.app;
 
 import com.atguigu.gmall.realtime.common.base.BaseSQL;
 import com.atguigu.gmall.realtime.common.constant.Constant;
@@ -19,7 +19,7 @@ import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 public class DwsTrafficSourceKeywordPageViewWindow extends BaseSQL {
     public static void main(String[] args) {
         new DwsTrafficSourceKeywordPageViewWindow()
-                .start(1005,
+                .start(1011,
                         4,
                         Constant.DWS_TRAFFIC_SOURCE_KEYWORD_PAGE_VIEW_WINDOW);
     }

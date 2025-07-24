@@ -31,6 +31,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -66,6 +69,11 @@
     "Application.DwdTradeOrderRefundSuccess.executor": "Run",
     "Application.DwdTrafficBaseLogSplit.executor": "Run",
     "Application.DwsTrafficSourceKeywordPageViewWindow.executor": "Run",
+    "Application.DwsTrafficVcChArIsNewPageViewWindow (1).executor": "Run",
+    "Application.DwsTrafficVcChArIsNewPageViewWindow (2).executor": "Run",
+    "Application.DwsTrafficVcChArIsNewPageViewWindow (3).executor": "Run",
+    "Application.DwsTrafficVcChArIsNewPageViewWindow (4).executor": "Run",
+    "Application.DwsTrafficVcChArIsNewPageViewWindow.executor": "Run",
     "Application.FlinkCDC_01_DS.executor": "Run",
     "Application.FlinkCDC_02_SQL.executor": "Run",
     "Application.FlinkCdcTest.executor": "Run",
@@ -119,11 +127,11 @@
       <recent name="D:\02_code\gmall2025-parent\gmall2025-realtime\src\main\java\com\atguigu\gmall\realtime\app\dwd" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.atguigu.gmall.realtime.dws.app" />
       <recent name="com.atguigu.gmall.realtime.dwd" />
       <recent name="com.atguigu.gmall.realtime.common.util" />
       <recent name="com.atguigu.gmall.realtime.bean" />
       <recent name="com.atguigu.gmall.realtime.app.utils" />
-      <recent name="com.test" />
     </key>
   </component>
   <component name="RunManager" selected="Application.DwdBaseLog">
@@ -141,13 +149,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DwdTradeOrderPaySucDetail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="DwsTrafficVcChArIsNewPageViewWindow (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dwd.DwdTradeOrderPaySucDetail" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsTrafficVcChArIsNewPageViewWindow" />
       <module name="realtime-gmall" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.realtime.dwd.*" />
+          <option name="PATTERN" value="com.atguigu.gmall.realtime.dws.app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -155,13 +163,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DwdTradeOrderRefund" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="DwsTrafficVcChArIsNewPageViewWindow (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dwd.DwdTradeOrderRefund" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsTrafficVcChArIsNewPageViewWindow" />
       <module name="realtime-gmall" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.realtime.dwd.*" />
+          <option name="PATTERN" value="com.atguigu.gmall.realtime.dws.app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -169,13 +177,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DwdTradeOrderRefundSuccess" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="DwsTrafficVcChArIsNewPageViewWindow (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dwd.DwdTradeOrderRefundSuccess" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsTrafficVcChArIsNewPageViewWindow" />
       <module name="realtime-gmall" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.realtime.dwd.*" />
+          <option name="PATTERN" value="com.atguigu.gmall.realtime.dws.app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -183,13 +191,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DwsTrafficSourceKeywordPageViewWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="DwsTrafficVcChArIsNewPageViewWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.DwsTrafficSourceKeywordPageViewWindow" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsTrafficVcChArIsNewPageViewWindow" />
       <module name="realtime-gmall" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.realtime.dws.*" />
+          <option name="PATTERN" value="com.atguigu.gmall.realtime.dws.app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -204,19 +212,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.DwdTradeOrderPaySucDetail" />
-      <item itemvalue="Application.DwdTradeOrderRefund" />
-      <item itemvalue="Application.DwdTradeOrderRefundSuccess" />
-      <item itemvalue="Application.DwsTrafficSourceKeywordPageViewWindow" />
+      <item itemvalue="Application.DwsTrafficVcChArIsNewPageViewWindow" />
+      <item itemvalue="Application.DwsTrafficVcChArIsNewPageViewWindow (2)" />
+      <item itemvalue="Application.DwsTrafficVcChArIsNewPageViewWindow (3)" />
+      <item itemvalue="Application.DwsTrafficVcChArIsNewPageViewWindow (4)" />
       <item itemvalue="Application.DwdBaseLog" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DwsTrafficSourceKeywordPageViewWindow" />
+        <item itemvalue="Application.DwsTrafficVcChArIsNewPageViewWindow (4)" />
         <item itemvalue="Application.DwdBaseLog" />
-        <item itemvalue="Application.DwdTradeOrderRefundSuccess" />
-        <item itemvalue="Application.DwdTradeOrderRefund" />
-        <item itemvalue="Application.DwdTradeOrderPaySucDetail" />
+        <item itemvalue="Application.DwsTrafficVcChArIsNewPageViewWindow" />
+        <item itemvalue="Application.DwsTrafficVcChArIsNewPageViewWindow (3)" />
+        <item itemvalue="Application.DwsTrafficVcChArIsNewPageViewWindow (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -244,7 +252,7 @@
       <workItem from="1753148321844" duration="22530000" />
       <workItem from="1753190591578" duration="5518000" />
       <workItem from="1753263617442" duration="901000" />
-      <workItem from="1753264543141" duration="13876000" />
+      <workItem from="1753264543141" duration="25431000" />
     </task>
     <task id="LOCAL-00001" summary="互动域评论事务事实表">
       <option name="closed" value="true" />
@@ -462,7 +470,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753325203941</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="流量域搜索关键词粒度页面浏览各窗口汇总表">
+      <option name="closed" value="true" />
+      <created>1753329068298</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1753329068298</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,7 +519,8 @@
     <MESSAGE value="交易域退单事务事实表" />
     <MESSAGE value="dwd" />
     <MESSAGE value="交易域退款成功事务事实表" />
-    <option name="LAST_COMMIT_MESSAGE" value="交易域退款成功事务事实表" />
+    <MESSAGE value="流量域搜索关键词粒度页面浏览各窗口汇总表" />
+    <option name="LAST_COMMIT_MESSAGE" value="流量域搜索关键词粒度页面浏览各窗口汇总表" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

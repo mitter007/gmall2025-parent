@@ -1,6 +1,7 @@
 package com.atguigu.gmall.realtime.common.base;
 
-import com.atguigu.gmall.realtime.common.util.KafkaUtil;
+import com.atguigu.gmall.realtime.common.util.FlinkSinkUtil;
+import com.atguigu.gmall.realtime.common.util.FlinkSourceUtil;
 import org.apache.flink.api.common.eventtime.WatermarkStrategy;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.connector.kafka.source.KafkaSource;
@@ -35,7 +36,7 @@ public abstract class BaseApp {
         env.getCheckpointConfig().setMinPauseBetweenCheckpoints(2000L);*/
 
 
-        KafkaSource<String> kafkaSource = KafkaUtil.getKafkaSource(topic, groupId);
+        KafkaSource<String> kafkaSource = FlinkSourceUtil.getKafkaSource(topic, groupId);
         DataStreamSource<String> dataStreamSource = env.fromSource(kafkaSource, WatermarkStrategy.noWatermarks(), "kafka source");
         handle(env, dataStreamSource);
         env.execute();

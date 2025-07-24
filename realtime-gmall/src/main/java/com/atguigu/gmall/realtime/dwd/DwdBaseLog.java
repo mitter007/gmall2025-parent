@@ -6,7 +6,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.atguigu.gmall.realtime.common.base.BaseApp;
 import com.atguigu.gmall.realtime.common.constant.Constant;
 import com.atguigu.gmall.realtime.common.util.DateFormatUtil;
-import com.atguigu.gmall.realtime.common.util.KafkaUtil;
+import com.atguigu.gmall.realtime.common.util.FlinkSinkUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.flink.api.common.state.StateTtlConfig;
 import org.apache.flink.api.common.state.ValueState;
@@ -35,13 +35,6 @@ import java.util.Set;
  * @Version 1.0
  */
 public class DwdBaseLog extends BaseApp {
-
-    private final String START = "start";
-    private final String ERR = "err";
-    private final String DISPLAY = "display";
-    private final String ACTION = "action";
-    private final String PAGE = "page";
-
     public static void main(String[] args) throws Exception {
         new DwdBaseLog().start(
                 1002,
@@ -199,8 +192,8 @@ public class DwdBaseLog extends BaseApp {
                         }
                         jsonObject.remove("actions");
                     }
+                    out.collect(jsonObject.toJSONString());
                 }
-                out.collect(jsonObject.toJSONString());
 
             }
         });
@@ -229,7 +222,7 @@ public class DwdBaseLog extends BaseApp {
         Set<Map.Entry<String, DataStream<String>>> entries = map.entrySet();
         for (Map.Entry<String, DataStream<String>> entry : entries) {
             DataStream<String> value = entry.getValue();
-            value.sinkTo(KafkaUtil.getKafkaSink(entry.getKey()));
+            value.sinkTo(FlinkSinkUtil.getKafkaSink(entry.getKey()));
         }
 
 /*
