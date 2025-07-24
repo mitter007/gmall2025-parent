@@ -5,3 +5,46 @@ JOIN base_dic FOR SYSTEM_TIME AS OF c.pt AS dic  有这样字段的是lookupjoin
 JOIN base_dic	关联维表 base_dic
 FOR SYSTEM_TIME AS OF c.pt	使用 c.pt（处理时间字段）作为版本点，进行时点关联，Flink 根据这个时间点去查维表
 AS dic	给维表 base_dic 起别名为 dic
+
+
+订单取消事务型事实表
+
+{
+	"id": "7798",
+	"order_id": "4381",
+	"user_id": "231",
+	"sku_id": "32",
+	"sku_name": "香奈儿（Chanel）女士香水5号香水 粉邂逅柔情淡香水EDT 5号淡香水35ml",
+	"province_id": "6",
+	"activity_id": null,
+	"activity_rule_id": null,
+	"coupon_id": null,
+	"date_id": "2025-06-11",
+	"create_time": "2025-06-11 22:02:43",
+	"sku_num": "2",
+	"split_original_amount": "600.0000",
+	"split_activity_amount": "0.0",
+	"split_coupon_amount": "0.0",
+	"split_total_amount": "600.0",
+	"ts": 1753191481
+}
+
+create Table    dwd_trade_order_cancel(
+id  string,
+order_id    string,
+user_id string,
+sku_id  string,
+sku_name    string,
+province_id string,
+activity_id string,
+activity_rule_id    string,
+coupon_id   string,
+date_id string,
+create_time string,
+sku_num string,
+split_original_amount   string,
+split_activity_amount   string,
+split_coupon_amount string,
+split_total_amount  string,
+ts  bigint
+)

@@ -2,6 +2,7 @@ package com.atguigu.gmall.realtime.dwd;
 
 import com.atguigu.gmall.realtime.common.base.BaseSQL;
 import com.atguigu.gmall.realtime.common.constant.Constant;
+import com.atguigu.gmall.realtime.common.util.FlinkSQLUtil;
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 
@@ -62,7 +63,36 @@ public class DwdTradeOrderDetail extends BaseSQL {
                         "on od.id=act.order_detail_id " +
                         "left join order_detail_coupon cou " +
                         "on od.id=cou.order_detail_id ");
-        result.execute().print();
+      tableEnv.createTemporaryView("result", result);
+
+
+        //TODO 将关联的结果写到Kafka主题
+        //创建动态表和要写入的主题进行映射
+        tableEnv.executeSql(
+                "create table "+Constant.TOPIC_DWD_TRADE_ORDER_DETAIL+"(" +
+                        "id string," +
+                        "order_id string," +
+                        "user_id string," +
+                        "sku_id string," +
+                        "sku_name string," +
+                        "province_id string," +
+                        "activity_id string," +
+                        "activity_rule_id string," +
+                        "coupon_id string," +
+                        "date_id string," +
+                        "create_time string," +
+                        "sku_num string," +
+                        "split_original_amount string," +
+                        "split_activity_amount string," +
+                        "split_coupon_amount string," +
+                        "split_total_amount string," +
+                        "ts bigint," +
+                        "primary key(id) not enforced " +
+                        ")" + FlinkSQLUtil.getUpsertKafkaDDL(Constant.TOPIC_DWD_TRADE_ORDER_DETAIL));
+        tableEnv.executeSql("insert into "+Constant.TOPIC_DWD_TRADE_ORDER_DETAIL+" select * from `result`");
+
+
+
     }
 
     private static void readOrderDetail(StreamTableEnvironment tableEnv) {
