@@ -68,6 +68,7 @@
     "Application.DwdTradeOrderRefund.executor": "Run",
     "Application.DwdTradeOrderRefundSuccess.executor": "Run",
     "Application.DwdTrafficBaseLogSplit.executor": "Run",
+    "Application.DwsTradeCartAddUuWindow.executor": "Run",
     "Application.DwsTrafficHomeDetailPageViewWindow (1).executor": "Run",
     "Application.DwsTrafficHomeDetailPageViewWindow (2).executor": "Run",
     "Application.DwsTrafficHomeDetailPageViewWindow (3).executor": "Run",
@@ -79,6 +80,8 @@
     "Application.DwsTrafficVcChArIsNewPageViewWindow (4).executor": "Run",
     "Application.DwsTrafficVcChArIsNewPageViewWindow.executor": "Run",
     "Application.DwsUserUserLoginWindow.executor": "Run",
+    "Application.DwsUserUserRegisterWindow (1).executor": "Run",
+    "Application.DwsUserUserRegisterWindow.executor": "Run",
     "Application.FlinkCDC_01_DS.executor": "Run",
     "Application.FlinkCDC_02_SQL.executor": "Run",
     "Application.FlinkCdcTest.executor": "Run",
@@ -87,6 +90,7 @@
     "Application.KeywordUtil.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.PhoenixUtil.executor": "Run",
+    "Application.RegistTest.executor": "Run",
     "Application.Test01_Doris01.executor": "Run",
     "Application.Test02_Doris_API.executor": "Run",
     "Application.Wrapper.executor": "Run",
@@ -132,17 +136,17 @@
       <recent name="D:\02_code\gmall2025-parent\gmall2025-realtime\src\main\java\com\atguigu\gmall\realtime\app\dwd" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.atguigu.gmall.realtime.dws.bean" />
       <recent name="com.atguigu.gmall.realtime.dws.app" />
+      <recent name="com.atguigu.gmall.realtime.bean" />
+      <recent name="com.atguigu.gmall.realtime.dws.bean" />
       <recent name="com.atguigu.gmall.realtime.dwd" />
       <recent name="com.atguigu.gmall.realtime.common.util" />
-      <recent name="com.atguigu.gmall.realtime.bean" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DwsTrafficHomeDetailPageViewWindow">
-    <configuration name="DwdBaseLog" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.DwsTradeCartAddUuWindow">
+    <configuration name="DwdCartAddInfo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dwd.DwdBaseLog" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dwd.DwdCartAddInfo" />
       <module name="realtime-gmall" />
       <extension name="coverage">
         <pattern>
@@ -154,9 +158,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DwsTrafficHomeDetailPageViewWindow (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="DwsTradeCartAddUuWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsTrafficHomeDetailPageViewWindow" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsTradeCartAddUuWindow" />
       <module name="realtime-gmall" />
       <extension name="coverage">
         <pattern>
@@ -168,9 +172,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DwsTrafficHomeDetailPageViewWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="DwsUserUserRegisterWindow (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsTrafficHomeDetailPageViewWindow" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsUserUserRegisterWindow" />
       <module name="realtime-gmall" />
       <extension name="coverage">
         <pattern>
@@ -182,9 +186,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DwsUserUserLoginWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="DwsUserUserRegisterWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsUserUserLoginWindow" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsUserUserRegisterWindow" />
       <module name="realtime-gmall" />
       <extension name="coverage">
         <pattern>
@@ -196,9 +200,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JsonTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.JsonTest" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.RegistTest" />
       <module name="realtime-gmall" />
       <extension name="coverage">
         <pattern>
@@ -217,19 +221,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.DwsTrafficHomeDetailPageViewWindow" />
-      <item itemvalue="Application.DwsTrafficHomeDetailPageViewWindow (3)" />
-      <item itemvalue="Application.DwsUserUserLoginWindow" />
-      <item itemvalue="Application.JsonTest" />
-      <item itemvalue="Application.DwdBaseLog" />
+      <item itemvalue="Application.DwdCartAddInfo" />
+      <item itemvalue="Application.DwsTradeCartAddUuWindow" />
+      <item itemvalue="Application.DwsUserUserRegisterWindow" />
+      <item itemvalue="Application.DwsUserUserRegisterWindow (1)" />
+      <item itemvalue="Application.RegistTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DwsTrafficHomeDetailPageViewWindow" />
-        <item itemvalue="Application.DwsUserUserLoginWindow" />
-        <item itemvalue="Application.DwdBaseLog" />
-        <item itemvalue="Application.JsonTest" />
-        <item itemvalue="Application.DwsTrafficHomeDetailPageViewWindow (3)" />
+        <item itemvalue="Application.DwsTradeCartAddUuWindow" />
+        <item itemvalue="Application.DwdCartAddInfo" />
+        <item itemvalue="Application.DwsUserUserRegisterWindow (1)" />
+        <item itemvalue="Application.RegistTest" />
+        <item itemvalue="Application.DwsUserUserRegisterWindow" />
       </list>
     </recent_temporary>
   </component>
@@ -258,7 +262,7 @@
       <workItem from="1753190591578" duration="5518000" />
       <workItem from="1753263617442" duration="901000" />
       <workItem from="1753264543141" duration="27487000" />
-      <workItem from="1753360149158" duration="10489000" />
+      <workItem from="1753360149158" duration="19455000" />
     </task>
     <task id="LOCAL-00001" summary="互动域评论事务事实表">
       <option name="closed" value="true" />
@@ -516,7 +520,23 @@
       <option name="project" value="LOCAL" />
       <updated>1753366440934</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="用户域用户登录各窗口汇总表">
+      <option name="closed" value="true" />
+      <created>1753408665830</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1753408665830</updated>
+    </task>
+    <task id="LOCAL-00034" summary="用户域用户注册各窗口汇总表（练习）">
+      <option name="closed" value="true" />
+      <created>1753413277096</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1753413277096</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,8 +554,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="互动域评论事务事实表(2)" />
-    <MESSAGE value="互动域评论事务事实表(3)" />
     <MESSAGE value="交易域加购事实表" />
     <MESSAGE value="交易域下单事务事实表" />
     <MESSAGE value="dwd(2)" />
@@ -559,7 +577,9 @@
     <MESSAGE value="12.2 流量域版本-渠道-地区-访客类别粒度页面浏览各窗口汇总表" />
     <MESSAGE value="流量域首页、详情页页面浏览各窗口汇总表 数据无法插入到doris表中" />
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="用户域用户登录各窗口汇总表" />
+    <MESSAGE value="用户域用户注册各窗口汇总表（练习）" />
+    <option name="LAST_COMMIT_MESSAGE" value="用户域用户注册各窗口汇总表（练习）" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
