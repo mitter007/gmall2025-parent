@@ -69,6 +69,13 @@
     "Application.DwdTradeOrderRefundSuccess.executor": "Run",
     "Application.DwdTrafficBaseLogSplit.executor": "Run",
     "Application.DwsTradeCartAddUuWindow.executor": "Run",
+    "Application.DwsTradeOrderWindow (1).executor": "Run",
+    "Application.DwsTradeOrderWindow.executor": "Run",
+    "Application.DwsTradePaymentSucWindow (1).executor": "Run",
+    "Application.DwsTradePaymentSucWindow.executor": "Run",
+    "Application.DwsTradeSkuOrderWindowSyncCache (1).executor": "Run",
+    "Application.DwsTradeSkuOrderWindowSyncCache (2).executor": "Run",
+    "Application.DwsTradeSkuOrderWindowSyncCache.executor": "Run",
     "Application.DwsTrafficHomeDetailPageViewWindow (1).executor": "Run",
     "Application.DwsTrafficHomeDetailPageViewWindow (2).executor": "Run",
     "Application.DwsTrafficHomeDetailPageViewWindow (3).executor": "Run",
@@ -85,11 +92,13 @@
     "Application.FlinkCDC_01_DS.executor": "Run",
     "Application.FlinkCDC_02_SQL.executor": "Run",
     "Application.FlinkCdcTest.executor": "Run",
+    "Application.HBaseUtil.executor": "Run",
     "Application.JsonTest.executor": "Run",
     "Application.KafkaMain.executor": "Run",
     "Application.KeywordUtil.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.PhoenixUtil.executor": "Run",
+    "Application.RedisUtil.executor": "Run",
     "Application.RegistTest.executor": "Run",
     "Application.Test01_Doris01.executor": "Run",
     "Application.Test02_Doris_API.executor": "Run",
@@ -102,7 +111,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "1.8.0_271",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/02_code/gmall2025-parent/kafka-study/src/main/resources",
+    "last_opened_file_path": "D:/02_code/gmall2025-parent/realtime-gmall/src/main/java/com/atguigu/gmall/realtime/common/function",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -111,7 +120,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15347019",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editing.templates",
+    "settings.editor.selected.configurable": "com.gitee.ui.GiteeSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -125,32 +134,32 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\02_code\gmall2025-parent\realtime-gmall\src\main\java\com\atguigu\gmall\realtime\common\function" />
       <recent name="D:\02_code\gmall2025-parent\kafka-study\src\main\resources" />
       <recent name="D:\02_code\gmall2025-parent\realtime-gmall\src\main\resources" />
       <recent name="D:\02_code\gmall2025-parent\gmall2025-realtime\src\main\java\realtime" />
       <recent name="D:\02_code\gmall2025-parent\flink-cdc" />
-      <recent name="D:\02_code\gmall2025-parent\gmall2025-realtime" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\02_code\gmall2025-parent\kafka-study\target\generated-sources" />
       <recent name="D:\02_code\gmall2025-parent\gmall2025-realtime\src\main\java\com\atguigu\gmall\realtime\app\dwd" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.atguigu.gmall.realtime.common.util" />
+      <recent name="com.atguigu.gmall.realtime.common.function" />
+      <recent name="com.atguigu.gmall.realtime.dwd" />
       <recent name="com.atguigu.gmall.realtime.dws.app" />
       <recent name="com.atguigu.gmall.realtime.bean" />
-      <recent name="com.atguigu.gmall.realtime.dws.bean" />
-      <recent name="com.atguigu.gmall.realtime.dwd" />
-      <recent name="com.atguigu.gmall.realtime.common.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DwsTradeCartAddUuWindow">
-    <configuration name="DwdCartAddInfo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.DwdTradeOrderDetail">
+    <configuration name="DimApp (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dwd.DwdCartAddInfo" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dim.DimApp" />
       <module name="realtime-gmall" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.realtime.dwd.*" />
+          <option name="PATTERN" value="com.atguigu.gmall.realtime.dim.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -158,9 +167,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DwsTradeCartAddUuWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="DimApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsTradeCartAddUuWindow" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dim.DimApp" />
+      <module name="realtime-gmall" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.gmall.realtime.dim.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DwdTradeOrderDetail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dwd.DwdTradeOrderDetail" />
       <module name="realtime-gmall" />
       <extension name="coverage">
         <pattern>
@@ -172,9 +195,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DwsUserUserRegisterWindow (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="DwsTradeSkuOrderWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsUserUserRegisterWindow" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsTradeSkuOrderWindow" />
       <module name="realtime-gmall" />
       <extension name="coverage">
         <pattern>
@@ -186,27 +209,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DwsUserUserRegisterWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="HBaseUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsUserUserRegisterWindow" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.common.util.HBaseUtil" />
       <module name="realtime-gmall" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.realtime.dws.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegistTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.RegistTest" />
-      <module name="realtime-gmall" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.*" />
+          <option name="PATTERN" value="com.atguigu.gmall.realtime.common.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -221,19 +230,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.DwdCartAddInfo" />
-      <item itemvalue="Application.DwsTradeCartAddUuWindow" />
-      <item itemvalue="Application.DwsUserUserRegisterWindow" />
-      <item itemvalue="Application.DwsUserUserRegisterWindow (1)" />
-      <item itemvalue="Application.RegistTest" />
+      <item itemvalue="Application.DimApp" />
+      <item itemvalue="Application.DimApp (1)" />
+      <item itemvalue="Application.DwsTradeSkuOrderWindowSyncCache (2)" />
+      <item itemvalue="Application.HBaseUtil" />
+      <item itemvalue="Application.DwdTradeOrderDetail" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DwsTradeCartAddUuWindow" />
-        <item itemvalue="Application.DwdCartAddInfo" />
-        <item itemvalue="Application.DwsUserUserRegisterWindow (1)" />
-        <item itemvalue="Application.RegistTest" />
-        <item itemvalue="Application.DwsUserUserRegisterWindow" />
+        <item itemvalue="Application.DwsTradeSkuOrderWindowSyncCache (2)" />
+        <item itemvalue="Application.DwdTradeOrderDetail" />
+        <item itemvalue="Application.DimApp (1)" />
+        <item itemvalue="Application.DimApp" />
+        <item itemvalue="Application.HBaseUtil" />
       </list>
     </recent_temporary>
   </component>
@@ -262,7 +271,8 @@
       <workItem from="1753190591578" duration="5518000" />
       <workItem from="1753263617442" duration="901000" />
       <workItem from="1753264543141" duration="27487000" />
-      <workItem from="1753360149158" duration="19455000" />
+      <workItem from="1753360149158" duration="23382000" />
+      <workItem from="1753428745860" duration="11420000" />
     </task>
     <task id="LOCAL-00001" summary="互动域评论事务事实表">
       <option name="closed" value="true" />
@@ -536,7 +546,55 @@
       <option name="project" value="LOCAL" />
       <updated>1753413277096</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="12.6 交易域加购各窗口汇总表">
+      <option name="closed" value="true" />
+      <created>1753424649664</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1753424649664</updated>
+    </task>
+    <task id="LOCAL-00036" summary="1">
+      <option name="closed" value="true" />
+      <created>1753424657308</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1753424657308</updated>
+    </task>
+    <task id="LOCAL-00037" summary="交易域支付成功各窗口汇总表（练习）无法将数据插入doris">
+      <option name="closed" value="true" />
+      <created>1753428322911</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1753428322911</updated>
+    </task>
+    <task id="LOCAL-00038" summary="交易域支付成功各窗口汇总表（练习）无法将数据插入doris（2）">
+      <option name="closed" value="true" />
+      <created>1753429047792</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1753429047792</updated>
+    </task>
+    <task id="LOCAL-00039" summary="12.8 交易域下单各窗口汇总表（练习）">
+      <option name="closed" value="true" />
+      <created>1753449763506</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1753449763506</updated>
+    </task>
+    <task id="LOCAL-00040" summary="sku1">
+      <option name="closed" value="true" />
+      <created>1753496850607</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1753496850607</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,11 +612,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="交易域加购事实表" />
-    <MESSAGE value="交易域下单事务事实表" />
-    <MESSAGE value="dwd(2)" />
-    <MESSAGE value="dim完成" />
-    <MESSAGE value="init2" />
     <MESSAGE value="dim层创建" />
     <MESSAGE value="dwdbase" />
     <MESSAGE value="20250722-init" />
@@ -576,10 +629,15 @@
     <MESSAGE value="流量域搜索关键词粒度页面浏览各窗口汇总表" />
     <MESSAGE value="12.2 流量域版本-渠道-地区-访客类别粒度页面浏览各窗口汇总表" />
     <MESSAGE value="流量域首页、详情页页面浏览各窗口汇总表 数据无法插入到doris表中" />
-    <MESSAGE value="1" />
     <MESSAGE value="用户域用户登录各窗口汇总表" />
     <MESSAGE value="用户域用户注册各窗口汇总表（练习）" />
-    <option name="LAST_COMMIT_MESSAGE" value="用户域用户注册各窗口汇总表（练习）" />
+    <MESSAGE value="12.6 交易域加购各窗口汇总表" />
+    <MESSAGE value="1" />
+    <MESSAGE value="交易域支付成功各窗口汇总表（练习）无法将数据插入doris" />
+    <MESSAGE value="交易域支付成功各窗口汇总表（练习）无法将数据插入doris（2）" />
+    <MESSAGE value="12.8 交易域下单各窗口汇总表（练习）" />
+    <MESSAGE value="sku1" />
+    <option name="LAST_COMMIT_MESSAGE" value="sku1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
