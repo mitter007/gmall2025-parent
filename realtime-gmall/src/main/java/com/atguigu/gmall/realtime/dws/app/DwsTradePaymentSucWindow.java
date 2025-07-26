@@ -43,14 +43,14 @@ public class DwsTradePaymentSucWindow extends BaseApp {
         new DwsTradePaymentSucWindow()
                 .start(1015,
                         4, Constant.TOPIC_DWD_TRADE_ORDER_PAYMENT_SUCCESS,
-                        "dws_trade_order_window");
+                        "dws_trade_payment_suc_window");
     }
 
     @Override
     public void handle(StreamExecutionEnvironment env, DataStreamSource<String> KafkaDS) {
         // TODO 将流中数据转换为JSON对象
         SingleOutputStreamOperator<JSONObject> mapDS = KafkaDS.map(line -> JSON.parseObject(line));
-        mapDS.print();
+//        mapDS.print();
 
         //TODO 4.指定Watermark以及提取事件时间字段
         SingleOutputStreamOperator<JSONObject> watermarkDS = mapDS.assignTimestampsAndWatermarks(WatermarkStrategy.<JSONObject>forMonotonousTimestamps().withTimestampAssigner(new SerializableTimestampAssigner<JSONObject>() {
@@ -104,8 +104,8 @@ public class DwsTradePaymentSucWindow extends BaseApp {
         SingleOutputStreamOperator<TradePaymentBean> reduceDS = windowDS.reduce(new ReduceFunction<TradePaymentBean>() {
             @Override
             public TradePaymentBean reduce(TradePaymentBean value1, TradePaymentBean value2) throws Exception {
-                value1.setPaymentSucNewUserCount(value2.getPaymentSucUniqueUserCount() + value1.getPaymentSucUniqueUserCount());
-                value1.setPaymentSucNewUserCount(value2.getPaymentSucNewUserCount() + value1.getPaymentSucNewUserCount());
+                value1.setPaymentSucNewUserCount( value1.getPaymentSucUniqueUserCount()+value2.getPaymentSucUniqueUserCount());
+                value1.setPaymentSucNewUserCount( value1.getPaymentSucNewUserCount()+value2.getPaymentSucNewUserCount());
                 return value1;
             }
         }, new AllWindowFunction<TradePaymentBean, TradePaymentBean, TimeWindow>() {
@@ -114,6 +114,7 @@ public class DwsTradePaymentSucWindow extends BaseApp {
 
                 TradePaymentBean viewBean = values.iterator().next();
                 String stt = DateFormatUtil.tsToDateTime(window.getStart());
+                System.out.println("stt:"+stt);
                 String edt = DateFormatUtil.tsToDateTime(window.getEnd());
                 String curDate = DateFormatUtil.tsToDate(window.getStart());
                 viewBean.setStt(stt);
@@ -127,7 +128,7 @@ public class DwsTradePaymentSucWindow extends BaseApp {
         reduceDS.print("reduce>>>>");
         reduceDS
                 .map(new BeanToJsonStrMapFunction<TradePaymentBean>())
-                .sinkTo(FlinkSinkUtil.getDorisSink("dws_trade_order_window"));
+                .sinkTo(FlinkSinkUtil.getDorisSink("dws_trade_payment_suc_window"));
 
     }
 }

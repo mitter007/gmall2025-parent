@@ -47,6 +47,11 @@
             <artifactId>flink-connector-mysql-cdc</artifactId>
             <version>${flink-cdc.vesion}</version>
         </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
+
 
         <!-- hbase 依赖-->
         <dependency>

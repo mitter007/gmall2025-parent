@@ -2,12 +2,12 @@ package com.atguigu.gmall.realtime.dws.app;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.atguigu.gmall.realtime.bean.TrafficPageViewBean;
 import com.atguigu.gmall.realtime.common.base.BaseApp;
 import com.atguigu.gmall.realtime.common.constant.Constant;
+import com.atguigu.gmall.realtime.common.function.BeanToJsonStrMapFunction;
 import com.atguigu.gmall.realtime.common.util.DateFormatUtil;
 import com.atguigu.gmall.realtime.common.util.FlinkSinkUtil;
-import com.atguigu.gmall.realtime.bean.TrafficPageViewBean;
-import com.atguigu.gmall.realtime.common.function.BeanToJsonStrMapFunction;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.flink.api.common.eventtime.SerializableTimestampAssigner;
 import org.apache.flink.api.common.eventtime.WatermarkStrategy;

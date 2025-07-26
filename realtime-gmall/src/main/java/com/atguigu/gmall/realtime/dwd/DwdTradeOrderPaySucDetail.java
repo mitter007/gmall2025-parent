@@ -101,7 +101,6 @@ public class DwdTradeOrderPaySucDetail extends BaseSQL {
         tableEnv.executeSql("insert into " + Constant.TOPIC_DWD_TRADE_ORDER_PAYMENT_SUCCESS + " select * from `result`");
 
 
-
     }
 
     private static void readOrderInfoDwd(StreamTableEnvironment tableEnv) {

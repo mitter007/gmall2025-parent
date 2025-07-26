@@ -28,11 +28,11 @@ import java.util.Set;
  * @Create 2025/7/20 21:37
  * @Version 1.0
  */
-public class HbaseUtil {
+public class HBaseUtil {
 
-    private static final Logger logger = LogManager.getLogger(HbaseUtil.class);
+    private static final Logger logger = LogManager.getLogger(HBaseUtil.class);
 
-    public static Connection getHbaseconnection() throws IOException {
+    public static Connection getHBaseConnection() throws IOException {
 
         Configuration config = HBaseConfiguration.create();
 
@@ -51,7 +51,7 @@ public class HbaseUtil {
         return connection;
     }
 
-    public static void closeConnection(Connection connection) {
+    public static void closHBaseConnection(Connection connection) {
 
         // 3. 关闭连接
         if (connection != null) {
@@ -225,10 +225,34 @@ public class HbaseUtil {
         return null;
     }
 
+    //获取异步操作HBase的连接对象
+    public static AsyncConnection getHBaseAsyncConnection() {
+        Configuration conf = new Configuration();
+        conf.set("hbase.zookeeper.quorum", "hadoop202,hadoop203,hadoop204");
+
+        try {
+            AsyncConnection asyncConnection = ConnectionFactory.createAsyncConnection(conf).get();
+            return asyncConnection;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    //关闭异步操作HBase的连接对象
+    public static void closeAsyncHbaseConnection(AsyncConnection asyncConn) {
+        if (asyncConn != null && !asyncConn.isClosed()) {
+            try {
+                asyncConn.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
     public static void main(String[] args) throws Exception {
-        Connection hBaseConnection = getHbaseconnection();
+        Connection hBaseConnection = getHBaseConnection();
         JSONObject jsonObj = getRow(hBaseConnection, Constant.HBASE_NAMESPACE, "dim_base_trademark", "1", JSONObject.class);
         System.out.println(jsonObj);
-        closeConnection(hBaseConnection);
+        closHBaseConnection(hBaseConnection);
     }
 }

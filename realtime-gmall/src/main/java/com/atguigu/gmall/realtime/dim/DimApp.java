@@ -8,7 +8,7 @@ import com.atguigu.gmall.realtime.common.constant.Constant;
 import com.atguigu.gmall.realtime.common.function.HBaseSinkFunction;
 import com.atguigu.gmall.realtime.common.function.TableProcessFunction;
 import com.atguigu.gmall.realtime.common.util.FlinkSourceUtil;
-import com.atguigu.gmall.realtime.common.util.HbaseUtil;
+import com.atguigu.gmall.realtime.common.util.HBaseUtil;
 import com.ververica.cdc.connectors.mysql.source.MySqlSource;
 import org.apache.flink.api.common.eventtime.WatermarkStrategy;
 import org.apache.flink.api.common.functions.MapFunction;
@@ -58,7 +58,7 @@ public class DimApp extends BaseApp {
         SingleOutputStreamOperator<TableProcessDim> tPDS = readTableProcess(env);
 
         //TODO 根据配置表中的配置信息到HBase中执行建表或者删除表操作
-        tPDS   = createHbaseTable(tPDS);
+        tPDS = createHbaseTable(tPDS);
         //TODO 过滤维度数据
         SingleOutputStreamOperator<Tuple2<JSONObject, TableProcessDim>> connectDS = connect(tPDS, jsonDS);
         writeToHBase(connectDS);
@@ -126,7 +126,7 @@ public class DimApp extends BaseApp {
 
                             @Override
                             public void open(Configuration parameters) throws Exception {
-                                hbaseConn = HbaseUtil.getHbaseconnection();
+                                hbaseConn = HBaseUtil.getHBaseConnection();
                             }
 
                             @Override
@@ -137,15 +137,15 @@ public class DimApp extends BaseApp {
                                 //获取在HBase中建表的列族
                                 String[] sinkFamilies = tp.getSinkFamily().split(",");
                                 if ("d".equals(op)) {
-                                    HbaseUtil.dropHBaseTable(hbaseConn, Constant.HBASE_NAMESPACE, sinkTable);
+                                    HBaseUtil.dropHBaseTable(hbaseConn, Constant.HBASE_NAMESPACE, sinkTable);
                                 } else if ("r".equals(op)) {
                                     //从配置表中读取了一条数据或者向配置表中添加了一条配置   在hbase中执行建表
-                                    HbaseUtil.createHBaseTable(hbaseConn, Constant.HBASE_NAMESPACE, sinkTable, sinkFamilies);
+                                    HBaseUtil.createHBaseTable(hbaseConn, Constant.HBASE_NAMESPACE, sinkTable, sinkFamilies);
 
                                 } else {
                                     //对配置表中的配置信息进行了修改   先从hbase中将对应的表删除掉，再创建新表
-                                    HbaseUtil.dropHBaseTable(hbaseConn, Constant.HBASE_NAMESPACE, sinkTable);
-                                    HbaseUtil.createHBaseTable(hbaseConn, Constant.HBASE_NAMESPACE, sinkTable, sinkFamilies);
+                                    HBaseUtil.dropHBaseTable(hbaseConn, Constant.HBASE_NAMESPACE, sinkTable);
+                                    HBaseUtil.createHBaseTable(hbaseConn, Constant.HBASE_NAMESPACE, sinkTable, sinkFamilies);
                                 }
                                 return tp;
 
