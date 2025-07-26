@@ -28,6 +28,9 @@ import org.apache.flink.streaming.api.windowing.windows.TimeWindow;
 import org.apache.flink.util.Collector;
 
 import java.math.BigDecimal;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -88,14 +91,8 @@ public class DwsTradeProvinceOrderWindow extends BaseApp {
                 JSONObject lastJsonObj = lastJsonObjState.value();
                 if (lastJsonObj != null) {
                     //说明重复了 ，将已经发送到下游的数据(状态)，影响到度量值的字段进行取反再传递到下游
-                    String splitOriginalAmount = lastJsonObj.getString("split_original_amount");
-                    String splitCouponAmount = lastJsonObj.getString("split_coupon_amount");
-                    String splitActivityAmount = lastJsonObj.getString("split_activity_amount");
-                    String splitTotalAmount = lastJsonObj.getString("split_total_amount");
 
-                    lastJsonObj.put("split_original_amount", "-" + splitOriginalAmount);
-                    lastJsonObj.put("split_coupon_amount", "-" + splitCouponAmount);
-                    lastJsonObj.put("split_activity_amount", "-" + splitActivityAmount);
+                    String splitTotalAmount = lastJsonObj.getString("split_total_amount");
                     lastJsonObj.put("split_total_amount", "-" + splitTotalAmount);
                     out.collect(lastJsonObj);
                 }
@@ -117,10 +114,11 @@ public class DwsTradeProvinceOrderWindow extends BaseApp {
             public TradeProvinceOrderBean map(JSONObject jsonObj) throws Exception {
                 String provinceId = jsonObj.getString("province_id");
                 BigDecimal splitTotalAmount = jsonObj.getBigDecimal("split_total_amount");
+                String orderId = jsonObj.getString("order_id");
                 Long ts = jsonObj.getLong("ts") * 1000;
                 TradeProvinceOrderBean orderBean = TradeProvinceOrderBean.builder()
                         .provinceId(provinceId)
-                        .orderCount(1L)
+                        .orderIdSet(new HashSet<>(Collections.singleton(orderId)))
                         .orderAmount(splitTotalAmount)
                         .ts(ts)
                         .build();
@@ -140,7 +138,7 @@ public class DwsTradeProvinceOrderWindow extends BaseApp {
                 new ReduceFunction<TradeProvinceOrderBean>() {
                     @Override
                     public TradeProvinceOrderBean reduce(TradeProvinceOrderBean value1, TradeProvinceOrderBean value2) throws Exception {
-                        value1.setOrderCount(value1.getOrderCount()+ value2.getOrderCount());
+                        value1.getOrderIdSet().addAll(value2.getOrderIdSet());
                         value1.setOrderAmount(value1.getOrderAmount().add(value2.getOrderAmount()));
                         return value1;
                     }
@@ -156,6 +154,7 @@ public class DwsTradeProvinceOrderWindow extends BaseApp {
                         orderBean.setStt(stt);
                         orderBean.setEdt(edt);
                         orderBean.setCurDate(curDate);
+                        orderBean.setOrderCount((long) orderBean.getOrderIdSet().size());
                         out.collect(orderBean);
                     }
                 });
