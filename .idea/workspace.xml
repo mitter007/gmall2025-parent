@@ -32,7 +32,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -73,10 +73,14 @@
     "Application.DwsTradeOrderWindow.executor": "Run",
     "Application.DwsTradePaymentSucWindow (1).executor": "Run",
     "Application.DwsTradePaymentSucWindow.executor": "Run",
+    "Application.DwsTradeProvinceOrderWindow (1).executor": "Run",
     "Application.DwsTradeProvinceOrderWindow.executor": "Run",
     "Application.DwsTradeSkuOrderWindowSyncCache (1).executor": "Run",
     "Application.DwsTradeSkuOrderWindowSyncCache (2).executor": "Run",
     "Application.DwsTradeSkuOrderWindowSyncCache.executor": "Run",
+    "Application.DwsTradeTrademarkCategoryUserRefundWindow (1).executor": "Debug",
+    "Application.DwsTradeTrademarkCategoryUserRefundWindow.executor": "Debug",
+    "Application.DwsTradeTrademarkCategoryUserRefundWindow1.executor": "Debug",
     "Application.DwsTrafficHomeDetailPageViewWindow (1).executor": "Run",
     "Application.DwsTrafficHomeDetailPageViewWindow (2).executor": "Run",
     "Application.DwsTrafficHomeDetailPageViewWindow (3).executor": "Run",
@@ -147,13 +151,13 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.atguigu.gmall.realtime.dws.app" />
+      <recent name="com.atguigu.gmall.realtime.dwd" />
       <recent name="com.atguigu.gmall.realtime.common.util" />
       <recent name="com.atguigu.gmall.realtime.common.function" />
-      <recent name="com.atguigu.gmall.realtime.dwd" />
       <recent name="com.atguigu.gmall.realtime.bean" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DwdTradeOrderDetail">
+  <component name="RunManager" selected="Application.DwsTradeTrademarkCategoryUserRefundWindow (1)">
     <configuration name="DimApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dim.DimApp" />
@@ -168,9 +172,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DwdTradeOrderDetail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="DwdTradeOrderRefund" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dwd.DwdTradeOrderDetail" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dwd.DwdTradeOrderRefund" />
+      <module name="realtime-gmall" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.gmall.realtime.dwd.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DwsTradeTrademarkCategoryUserRefundWindow (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsTradeTrademarkCategoryUserRefundWindow" />
       <module name="realtime-gmall" />
       <extension name="coverage">
         <pattern>
@@ -182,9 +200,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DwsTradeProvinceOrderWindow (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="DwsTradeTrademarkCategoryUserRefundWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsTradeProvinceOrderWindow" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsTradeTrademarkCategoryUserRefundWindow" />
       <module name="realtime-gmall" />
       <extension name="coverage">
         <pattern>
@@ -196,23 +214,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DwsTradeProvinceOrderWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="DwsTradeTrademarkCategoryUserRefundWindow1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsTradeProvinceOrderWindow" />
-      <module name="realtime-gmall" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.realtime.dws.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DwsTradeSkuOrderWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsTradeSkuOrderWindow" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsTradeTrademarkCategoryUserRefundWindow1" />
       <module name="realtime-gmall" />
       <extension name="coverage">
         <pattern>
@@ -232,18 +236,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.DimApp" />
-      <item itemvalue="Application.DwsTradeProvinceOrderWindow" />
-      <item itemvalue="Application.DwsTradeProvinceOrderWindow (1)" />
-      <item itemvalue="Application.DwsTradeSkuOrderWindowSyncCache (2)" />
-      <item itemvalue="Application.DwdTradeOrderDetail" />
+      <item itemvalue="Application.DwdTradeOrderRefund" />
+      <item itemvalue="Application.DwsTradeTrademarkCategoryUserRefundWindow" />
+      <item itemvalue="Application.DwsTradeTrademarkCategoryUserRefundWindow (1)" />
+      <item itemvalue="Application.DwsTradeTrademarkCategoryUserRefundWindow1" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DwdTradeOrderDetail" />
+        <item itemvalue="Application.DwsTradeTrademarkCategoryUserRefundWindow (1)" />
+        <item itemvalue="Application.DwsTradeTrademarkCategoryUserRefundWindow" />
+        <item itemvalue="Application.DwsTradeTrademarkCategoryUserRefundWindow1" />
+        <item itemvalue="Application.DwdTradeOrderRefund" />
         <item itemvalue="Application.DimApp" />
-        <item itemvalue="Application.DwsTradeProvinceOrderWindow (1)" />
-        <item itemvalue="Application.DwsTradeProvinceOrderWindow" />
-        <item itemvalue="Application.DwsTradeSkuOrderWindowSyncCache (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -273,7 +277,7 @@
       <workItem from="1753263617442" duration="901000" />
       <workItem from="1753264543141" duration="27487000" />
       <workItem from="1753360149158" duration="23382000" />
-      <workItem from="1753428745860" duration="14741000" />
+      <workItem from="1753428745860" duration="22310000" />
     </task>
     <task id="LOCAL-00001" summary="互动域评论事务事实表">
       <option name="closed" value="true" />
@@ -603,7 +607,23 @@
       <option name="project" value="LOCAL" />
       <updated>1753499693782</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="12.10 交易域省份粒度下单各窗口汇总表&#10;缺陷：统计下单数，是使用order_id还是id">
+      <option name="closed" value="true" />
+      <created>1753511093031</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1753511093031</updated>
+    </task>
+    <task id="LOCAL-00043" summary="修改缺陷统计下单数，是使用order_id还是id，使用set将order_id装起来">
+      <option name="closed" value="true" />
+      <created>1753511562029</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1753511562029</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -621,8 +641,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="dwdbase" />
-    <MESSAGE value="20250722-init" />
     <MESSAGE value="DwdBaseDb" />
     <MESSAGE value="base" />
     <MESSAGE value="target" />
@@ -646,7 +664,9 @@
     <MESSAGE value="12.8 交易域下单各窗口汇总表（练习）" />
     <MESSAGE value="sku1" />
     <MESSAGE value="交易域SKU粒度下单各窗口汇总表" />
-    <option name="LAST_COMMIT_MESSAGE" value="交易域SKU粒度下单各窗口汇总表" />
+    <MESSAGE value="12.10 交易域省份粒度下单各窗口汇总表&#10;缺陷：统计下单数，是使用order_id还是id" />
+    <MESSAGE value="修改缺陷统计下单数，是使用order_id还是id，使用set将order_id装起来" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改缺陷统计下单数，是使用order_id还是id，使用set将order_id装起来" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
