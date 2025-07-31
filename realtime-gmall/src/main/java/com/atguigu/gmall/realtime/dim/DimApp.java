@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.atguigu.gmall.realtime.bean.TableProcessDim;
 import com.atguigu.gmall.realtime.common.base.BaseApp;
 import com.atguigu.gmall.realtime.common.constant.Constant;
+import com.atguigu.gmall.realtime.common.function.HBaseSink;
 import com.atguigu.gmall.realtime.common.function.HBaseSinkFunction;
 import com.atguigu.gmall.realtime.common.function.TableProcessFunction;
 import com.atguigu.gmall.realtime.common.util.FlinkSourceUtil;
@@ -14,6 +15,7 @@ import org.apache.flink.api.common.eventtime.WatermarkStrategy;
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.api.common.functions.RichMapFunction;
 import org.apache.flink.api.common.state.MapStateDescriptor;
+import org.apache.flink.api.connector.sink.Sink;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.datastream.BroadcastConnectedStream;
@@ -22,6 +24,7 @@ import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.ProcessFunction;
+import org.apache.flink.streaming.api.functions.sink.RichSinkFunction;
 import org.apache.flink.util.Collector;
 import org.apache.hadoop.hbase.client.Connection;
 import org.apache.log4j.LogManager;
@@ -179,7 +182,9 @@ public class DimApp extends BaseApp {
     }
 
     private static void writeToHBase(SingleOutputStreamOperator<Tuple2<JSONObject, TableProcessDim>> dimDS) {
-        dimDS.addSink(new HBaseSinkFunction());
+//        dimDS.addSink(new HBaseSinkFunction());
+//        使用新的sinkApi
+        dimDS.sinkTo(new HBaseSink());
     }
 
 }

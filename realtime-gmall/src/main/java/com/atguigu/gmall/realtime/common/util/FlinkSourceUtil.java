@@ -21,18 +21,19 @@ import java.io.IOException;
  * @Version 1.0
  */
 public class FlinkSourceUtil {
-    public static MySqlSource<String> getMysqlcdc(String database,String tableName) {
+    public static MySqlSource<String> getMysqlcdc(String database, String tableName) {
         MySqlSource<String> mySqlSource = MySqlSource.<String>builder()
                 .hostname(Constant.MYSQL_HOST)
                 .port(3306)
                 .databaseList(database) // set captured database, If you need to synchronize the whole database, Please set tableList to ".*".
-                .tableList(database+"."+tableName) // set captured table
+                .tableList(database + "." + tableName) // set captured table
                 .username(Constant.MYSQL_USER_NAME)
                 .password(Constant.MYSQL_PASSWORD)
                 .deserializer(new JsonDebeziumDeserializationSchema()) // converts SourceRecord to JSON String
                 .build();
         return mySqlSource;
     }
+
     //获取KafkaSource
     public static KafkaSource<String> getKafkaSource(String topic, String groupId) {
         KafkaSource<String> kafkaSource = KafkaSource.<String>builder()
@@ -43,7 +44,7 @@ public class FlinkSourceUtil {
                 //在生产环境中，一般为了保证消费的精准一次性，需要手动维护偏移量，KafkaSource->KafkaSourceReader->存储偏移量变量
                 //.setStartingOffsets(OffsetsInitializer.committedOffsets(OffsetResetStrategy.LATEST))
                 // 从最末尾位点开始消费
-                .setStartingOffsets(OffsetsInitializer.earliest())
+                .setStartingOffsets(OffsetsInitializer.latest())
                 //注意：如果使用Flink提供的SimpleStringSchema对String类型的消息进行反序列化，如果消息为空，会报错
                 //.setValueOnlyDeserializer(new SimpleStringSchema())
                 .setValueOnlyDeserializer(

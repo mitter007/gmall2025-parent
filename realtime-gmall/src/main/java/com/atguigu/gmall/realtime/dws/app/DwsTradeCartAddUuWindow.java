@@ -56,7 +56,7 @@ public class DwsTradeCartAddUuWindow extends BaseApp {
         SingleOutputStreamOperator<JSONObject> watermarkDS = mapDS.assignTimestampsAndWatermarks(WatermarkStrategy.<JSONObject>forMonotonousTimestamps().withTimestampAssigner(new SerializableTimestampAssigner<JSONObject>() {
             @Override
             public long extractTimestamp(JSONObject element, long recordTimestamp) {
-                return element.getLong("ts")*1000;
+                return element.getLong("ts") * 1000;
             }
         }));
 //        {"id":"259172","user_id":"808","sku_id":"6","sku_num":"1","ts":1751014852}
@@ -75,7 +75,7 @@ public class DwsTradeCartAddUuWindow extends BaseApp {
             @Override
             public void processElement(JSONObject value, ProcessFunction<JSONObject, CartAddUuBean>.Context ctx, Collector<CartAddUuBean> out) throws Exception {
                 String lastAddCartDate = valueState.value();
-                String currVisitDate = DateFormatUtil.tsToDate(value.getLong("ts")*1000);
+                String currVisitDate = DateFormatUtil.tsToDate(value.getLong("ts") * 1000);
                 Long cartAddUuCt = 0L;
                 if (StringUtils.isEmpty(lastAddCartDate) || lastAddCartDate != currVisitDate) {
                     cartAddUuCt = 1L;

@@ -208,7 +208,6 @@ public class DwdBaseLog extends BaseApp {
         processDS.print("5>>");
 
 
-
         HashMap<String, DataStream<String>> map = new HashMap<>();
         map.put(Constant.TOPIC_DWD_TRAFFIC_ERR, errTagOutput);
         map.put(Constant.TOPIC_DWD_TRAFFIC_START, startTagOutput);
