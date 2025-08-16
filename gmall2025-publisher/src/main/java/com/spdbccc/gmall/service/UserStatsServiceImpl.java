@@ -1,6 +1,8 @@
 package com.spdbccc.gmall.service;
 
 import com.spdbccc.gmall.bean.UserChangeCtPerType;
+import com.spdbccc.gmall.bean.UserPageCt;
+import com.spdbccc.gmall.bean.UserTradeCt;
 import com.spdbccc.gmall.mapper.UserStatsMapper;
 import com.spdbccc.gmall.service.impl.UserStatsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,4 +20,13 @@ public class UserStatsServiceImpl implements UserStatsService {
     public List<UserChangeCtPerType> getUserChangeCt(Integer date) {
         return userStatsMapper.selectUserChangeCtPerType(date);
     }
+    @Override
+    public List<UserPageCt> getUvByPage(Integer date) {
+        return userStatsMapper.selectUvByPage(date);
+    }
+    @Override
+    public List<UserTradeCt> getTradeUserCt(Integer date) {
+        return userStatsMapper.selectTradeUserCt(date);
+    }
+
 }
