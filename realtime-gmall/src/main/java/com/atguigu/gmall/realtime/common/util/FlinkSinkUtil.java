@@ -13,10 +13,12 @@ import org.apache.flink.api.common.serialization.DeserializationSchema;
 import org.apache.flink.api.common.serialization.SimpleStringSchema;
 import org.apache.flink.api.common.typeinfo.TypeInformation;
 import org.apache.flink.api.java.tuple.Tuple2;
+import org.apache.flink.connector.base.DeliveryGuarantee;
 import org.apache.flink.connector.kafka.sink.KafkaRecordSerializationSchema;
 import org.apache.flink.connector.kafka.sink.KafkaSink;
 import org.apache.flink.connector.kafka.source.KafkaSource;
 import org.apache.flink.connector.kafka.source.enumerator.initializer.OffsetsInitializer;
+import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.kafka.clients.producer.ProducerRecord;
 
 import javax.annotation.Nullable;
@@ -83,6 +85,20 @@ public class FlinkSinkUtil {
         return sink;
 
     }
+//      flink1.18官网的kafkasink
+/*    DataStream<String> stream = ...;
+
+    KafkaSink<String> sink = KafkaSink.<String>builder()
+            .setBootstrapServers(brokers)
+            .setRecordSerializer(KafkaRecordSerializationSchema.builder()
+                    .setTopic("topic-name")
+                    .setValueSerializationSchema(new SimpleStringSchema())
+                    .build()
+            )
+            .setDeliveryGuarantee(DeliveryGuarantee.AT_LEAST_ONCE)
+            .build();
+
+stream.sinkTo(sink);*/
 
     //获取DorisSink
     public static DorisSink<String> getDorisSink(String tableName) {

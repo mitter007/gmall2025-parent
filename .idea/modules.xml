@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/flink-cdc/flink-cdc.iml" filepath="$PROJECT_DIR$/flink-cdc/flink-cdc.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall2025-parent.iml" filepath="$PROJECT_DIR$/gmall2025-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall2025-publisher/gmall2025-publisher.iml" filepath="$PROJECT_DIR$/gmall2025-publisher/gmall2025-publisher.iml" />
     </modules>
   </component>
 </project>

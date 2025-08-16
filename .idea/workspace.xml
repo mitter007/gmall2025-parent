@@ -47,100 +47,101 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BaseDbApp.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.DimApp (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.DimApp.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Dwd01_DwdTrafficBaseLogSplit.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Dwd02_DwdInteractionCommentInfo.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Dwd03_TradeCartAdd.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Dwd04_TradeOrderDetail.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Dwd05_TradeOrderCancelDetail.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Dwd06_TradePayDetailSuc.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwdBaseDb.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwdBaseLog.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwdCartAddInfo.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwdInteractionCommentInfo.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwdTradeOrderCancelDetail.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwdTradeOrderDetail.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwdTradeOrderPaySucDetail.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwdTradeOrderRefund.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwdTradeOrderRefundSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwdTrafficBaseLogSplit.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsTradeCartAddUuWindow.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsTradeOrderWindow (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsTradeOrderWindow.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsTradePaymentSucWindow (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsTradePaymentSucWindow.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsTradeProvinceOrderWindow (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsTradeProvinceOrderWindow.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsTradeSkuOrderWindowSyncCache (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsTradeSkuOrderWindowSyncCache (2).executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsTradeSkuOrderWindowSyncCache.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsTradeTrademarkCategoryUserRefundWindow (1).executor&quot;: &quot;Debug&quot;,
-    &quot;Application.DwsTradeTrademarkCategoryUserRefundWindow.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.DwsTradeTrademarkCategoryUserRefundWindow1.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.DwsTrafficHomeDetailPageViewWindow (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsTrafficHomeDetailPageViewWindow (2).executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsTrafficHomeDetailPageViewWindow (3).executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsTrafficHomeDetailPageViewWindow.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsTrafficSourceKeywordPageViewWindow.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsTrafficVcChArIsNewPageViewWindow (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsTrafficVcChArIsNewPageViewWindow (2).executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsTrafficVcChArIsNewPageViewWindow (3).executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsTrafficVcChArIsNewPageViewWindow (4).executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsTrafficVcChArIsNewPageViewWindow.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsUserUserLoginWindow.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsUserUserRegisterWindow (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.DwsUserUserRegisterWindow.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FlinkCDC_01_DS.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FlinkCDC_02_SQL.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FlinkCdcTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HBaseUtil.executor&quot;: &quot;Run&quot;,
-    &quot;Application.JsonTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.KafkaMain.executor&quot;: &quot;Run&quot;,
-    &quot;Application.KeywordUtil.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PhoenixUtil.executor&quot;: &quot;Run&quot;,
-    &quot;Application.RedisUtil.executor&quot;: &quot;Run&quot;,
-    &quot;Application.RegistTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Test01_Doris01.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Test02_Doris_API.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Wrapper.executor&quot;: &quot;Run&quot;,
-    &quot;Application.testString.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.gmall2025-realtime [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.realtime-gmall [clean].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8.0_271&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/02_code/gmall2025-parent/realtime-gmall/src/main/java/com/atguigu/gmall/realtime/common/function&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15347019&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.gitee.ui.GiteeSettingsConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BaseDbApp.executor": "Debug",
+    "Application.ConsumerDemo1.executor": "Run",
+    "Application.DimApp (1).executor": "Run",
+    "Application.DimApp.executor": "Run",
+    "Application.Dwd01_DwdTrafficBaseLogSplit.executor": "Run",
+    "Application.Dwd02_DwdInteractionCommentInfo.executor": "Run",
+    "Application.Dwd03_TradeCartAdd.executor": "Run",
+    "Application.Dwd04_TradeOrderDetail.executor": "Run",
+    "Application.Dwd05_TradeOrderCancelDetail.executor": "Run",
+    "Application.Dwd06_TradePayDetailSuc.executor": "Run",
+    "Application.DwdBaseDb.executor": "Run",
+    "Application.DwdBaseLog.executor": "Run",
+    "Application.DwdCartAddInfo.executor": "Run",
+    "Application.DwdInteractionCommentInfo.executor": "Run",
+    "Application.DwdTradeOrderCancelDetail.executor": "Run",
+    "Application.DwdTradeOrderDetail.executor": "Run",
+    "Application.DwdTradeOrderPaySucDetail.executor": "Run",
+    "Application.DwdTradeOrderRefund.executor": "Run",
+    "Application.DwdTradeOrderRefundSuccess.executor": "Run",
+    "Application.DwdTrafficBaseLogSplit.executor": "Run",
+    "Application.DwsTradeCartAddUuWindow.executor": "Run",
+    "Application.DwsTradeOrderWindow (1).executor": "Run",
+    "Application.DwsTradeOrderWindow.executor": "Run",
+    "Application.DwsTradePaymentSucWindow (1).executor": "Run",
+    "Application.DwsTradePaymentSucWindow.executor": "Run",
+    "Application.DwsTradeProvinceOrderWindow (1).executor": "Run",
+    "Application.DwsTradeProvinceOrderWindow.executor": "Run",
+    "Application.DwsTradeSkuOrderWindowSyncCache (1).executor": "Run",
+    "Application.DwsTradeSkuOrderWindowSyncCache (2).executor": "Run",
+    "Application.DwsTradeSkuOrderWindowSyncCache.executor": "Run",
+    "Application.DwsTradeTrademarkCategoryUserRefundWindow (1).executor": "Debug",
+    "Application.DwsTradeTrademarkCategoryUserRefundWindow.executor": "Debug",
+    "Application.DwsTradeTrademarkCategoryUserRefundWindow1.executor": "Debug",
+    "Application.DwsTrafficHomeDetailPageViewWindow (1).executor": "Run",
+    "Application.DwsTrafficHomeDetailPageViewWindow (2).executor": "Run",
+    "Application.DwsTrafficHomeDetailPageViewWindow (3).executor": "Run",
+    "Application.DwsTrafficHomeDetailPageViewWindow.executor": "Run",
+    "Application.DwsTrafficSourceKeywordPageViewWindow.executor": "Run",
+    "Application.DwsTrafficVcChArIsNewPageViewWindow (1).executor": "Run",
+    "Application.DwsTrafficVcChArIsNewPageViewWindow (2).executor": "Run",
+    "Application.DwsTrafficVcChArIsNewPageViewWindow (3).executor": "Run",
+    "Application.DwsTrafficVcChArIsNewPageViewWindow (4).executor": "Run",
+    "Application.DwsTrafficVcChArIsNewPageViewWindow.executor": "Run",
+    "Application.DwsUserUserLoginWindow.executor": "Run",
+    "Application.DwsUserUserRegisterWindow (1).executor": "Run",
+    "Application.DwsUserUserRegisterWindow.executor": "Run",
+    "Application.FlinkCDC_01_DS.executor": "Run",
+    "Application.FlinkCDC_02_SQL.executor": "Run",
+    "Application.FlinkCdcTest.executor": "Run",
+    "Application.HBaseUtil.executor": "Run",
+    "Application.JsonTest.executor": "Run",
+    "Application.KafkaMain.executor": "Run",
+    "Application.KeywordUtil.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.PhoenixUtil.executor": "Run",
+    "Application.RedisUtil.executor": "Run",
+    "Application.RegistTest.executor": "Run",
+    "Application.Test01_Doris01.executor": "Run",
+    "Application.Test02_Doris_API.executor": "Run",
+    "Application.Wrapper.executor": "Run",
+    "Application.testString.executor": "Run",
+    "Maven.gmall2025-realtime [clean].executor": "Run",
+    "Maven.realtime-gmall [clean].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "1.8.0_271",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/02_code/gmall2025-parent/gmall2025-publisher",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15347019",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
-      &quot;repository&quot;
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "repository"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\02_code\gmall2025-parent\realtime-gmall\src\main\java\com\atguigu\gmall\realtime\common\function" />
       <recent name="D:\02_code\gmall2025-parent\kafka-study\src\main\resources" />
+      <recent name="D:\02_code\gmall2025-parent\realtime-gmall\src\main\java\com\atguigu\gmall\realtime\common\function" />
       <recent name="D:\02_code\gmall2025-parent\realtime-gmall\src\main\resources" />
       <recent name="D:\02_code\gmall2025-parent\gmall2025-realtime\src\main\java\realtime" />
       <recent name="D:\02_code\gmall2025-parent\flink-cdc" />
@@ -150,14 +151,28 @@
       <recent name="D:\02_code\gmall2025-parent\gmall2025-realtime\src\main\java\com\atguigu\gmall\realtime\app\dwd" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.atguigu.common" />
+      <recent name="com.atguigu.utils" />
+      <recent name="com.atguigu" />
       <recent name="com.atguigu.gmall.realtime.common.function" />
       <recent name="com.atguigu.gmall.realtime.dws.app" />
-      <recent name="com.atguigu.gmall.realtime.dwd" />
-      <recent name="com.atguigu.gmall.realtime.common.util" />
-      <recent name="com.atguigu.gmall.realtime.bean" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DimApp">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="ConsumerDemo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.ConsumerDemo1" />
+      <module name="kafka-study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DimApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dim.DimApp" />
@@ -165,48 +180,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.atguigu.gmall.realtime.dim.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DwsTradeTrademarkCategoryUserRefundWindow (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsTradeTrademarkCategoryUserRefundWindow" />
-      <module name="realtime-gmall" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.realtime.dws.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DwsTradeTrademarkCategoryUserRefundWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsTradeTrademarkCategoryUserRefundWindow" />
-      <module name="realtime-gmall" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.realtime.dws.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DwsTradeTrademarkCategoryUserRefundWindow1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dws.app.DwsTradeTrademarkCategoryUserRefundWindow1" />
-      <module name="realtime-gmall" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.realtime.dws.app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -228,6 +201,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="KafkaMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.KafkaMain" />
+      <module name="kafka-study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.spdbccc.Main" />
+      <module name="gmall2025-publisher" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.spdbccc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <method v="2">
@@ -235,19 +236,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.KafkaMain" />
+      <item itemvalue="Application.ConsumerDemo1" />
       <item itemvalue="Application.FlinkCdcTest" />
       <item itemvalue="Application.DimApp" />
-      <item itemvalue="Application.DwsTradeTrademarkCategoryUserRefundWindow" />
-      <item itemvalue="Application.DwsTradeTrademarkCategoryUserRefundWindow (1)" />
-      <item itemvalue="Application.DwsTradeTrademarkCategoryUserRefundWindow1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.KafkaMain" />
+        <item itemvalue="Application.ConsumerDemo1" />
         <item itemvalue="Application.DimApp" />
         <item itemvalue="Application.FlinkCdcTest" />
-        <item itemvalue="Application.DwsTradeTrademarkCategoryUserRefundWindow (1)" />
-        <item itemvalue="Application.DwsTradeTrademarkCategoryUserRefundWindow" />
-        <item itemvalue="Application.DwsTradeTrademarkCategoryUserRefundWindow1" />
       </list>
     </recent_temporary>
   </component>
@@ -278,7 +279,15 @@
       <workItem from="1753264543141" duration="27487000" />
       <workItem from="1753360149158" duration="23382000" />
       <workItem from="1753428745860" duration="24521000" />
-      <workItem from="1753883503644" duration="10071000" />
+      <workItem from="1753883503644" duration="19964000" />
+      <workItem from="1754207568660" duration="2963000" />
+      <workItem from="1754288086753" duration="4534000" />
+      <workItem from="1754447082785" duration="4502000" />
+      <workItem from="1754640799437" duration="3563000" />
+      <workItem from="1754993245234" duration="2722000" />
+      <workItem from="1755133270809" duration="690000" />
+      <workItem from="1755224262865" duration="3389000" />
+      <workItem from="1755300673526" duration="2423000" />
     </task>
     <task id="LOCAL-00001" summary="互动域评论事务事实表">
       <option name="closed" value="true" />
@@ -632,7 +641,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753520235367</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="修改hbaseSink">
+      <option name="closed" value="true" />
+      <created>1753948392932</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1753948392932</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -650,7 +667,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="base" />
     <MESSAGE value="target" />
     <MESSAGE value="CartInfo" />
     <MESSAGE value="DwdTradeOrderDetail" />
@@ -675,7 +691,8 @@
     <MESSAGE value="12.10 交易域省份粒度下单各窗口汇总表&#10;缺陷：统计下单数，是使用order_id还是id" />
     <MESSAGE value="修改缺陷统计下单数，是使用order_id还是id，使用set将order_id装起来" />
     <MESSAGE value="12.11 交易域品牌-品类-用户粒度退单各窗口汇总表（练习）" />
-    <option name="LAST_COMMIT_MESSAGE" value="12.11 交易域品牌-品类-用户粒度退单各窗口汇总表（练习）" />
+    <MESSAGE value="修改hbaseSink" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改hbaseSink" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -689,6 +706,11 @@
           <url>file://$PROJECT_DIR$/realtime-gmall/src/main/java/com/atguigu/gmall/realtime/dwd/DwdTradeOrderDetail.java</url>
           <line>21</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kafka-study/src/main/java/org/apache/kafka/clients/consumer/internals/AbstractCoordinator.java</url>
+          <line>901</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

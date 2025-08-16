@@ -48,7 +48,7 @@ public class DwsTradeCartAddUuWindow extends BaseApp {
 
     @Override
     public void handle(StreamExecutionEnvironment env, DataStreamSource<String> KafkaDS) {
-        // TODO 将流中数据转换为JSON对象
+         // TODO 将流中数据转换为JSON对象
         SingleOutputStreamOperator<JSONObject> mapDS = KafkaDS.map(line -> JSON.parseObject(line));
         mapDS.print();
         ;
