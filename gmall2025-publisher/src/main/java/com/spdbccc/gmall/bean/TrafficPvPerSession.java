@@ -5,9 +5,9 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class TrafficUvCt {
+public class TrafficPvPerSession {
     // 渠道
     String ch;
-    // 独立访客数
-    Integer uvCt;
+    // 各会话页面浏览数
+    Double pvPerSession;
 }

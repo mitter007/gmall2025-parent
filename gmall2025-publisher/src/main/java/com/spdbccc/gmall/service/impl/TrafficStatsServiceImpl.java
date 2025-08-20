@@ -1,7 +1,7 @@
 package com.spdbccc.gmall.service.impl;
 
 
-import com.spdbccc.gmall.bean.TrafficUvCt;
+import com.spdbccc.gmall.bean.*;
 import com.spdbccc.gmall.mapper.TrafficStatsMapper;
 import com.spdbccc.gmall.service.TrafficStatsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,4 +24,8 @@ public class TrafficStatsServiceImpl implements TrafficStatsService {
     public List<TrafficUvCt> getChUvCt(Integer date, Integer limit) {
         return trafficStatsMapper.selectChUvCt(date,limit);
     }
+
+
+
+
 }

@@ -27,8 +27,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * ClassName: DwsTradeSkuOrderWindowSyncCache
  * Package: com.atguigu.gmall.realtime.dws.app
- * Description: 12.9 交易域SKU粒度下单各窗口汇总表
- *
+ * Description:
  * @Author JWT
  * @Create 2025/7/25 21:28
  * @Version 1.0

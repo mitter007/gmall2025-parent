@@ -2,7 +2,7 @@ package com.spdbccc.gmall.service;
 
 
 
-import com.spdbccc.gmall.bean.TrafficUvCt;
+import com.spdbccc.gmall.bean.*;
 
 import java.util.List;
 
@@ -14,4 +14,5 @@ import java.util.List;
 public interface TrafficStatsService {
     //获取某天各个渠道独立访客数
     List<TrafficUvCt> getChUvCt(Integer date, Integer limit);
+
 }

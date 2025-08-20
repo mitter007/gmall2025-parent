@@ -47,99 +47,99 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BaseDbApp.executor": "Debug",
-    "Application.ConsumerDemo1.executor": "Run",
-    "Application.DimApp (1).executor": "Run",
-    "Application.DimApp.executor": "Run",
-    "Application.Dwd01_DwdTrafficBaseLogSplit.executor": "Run",
-    "Application.Dwd02_DwdInteractionCommentInfo.executor": "Run",
-    "Application.Dwd03_TradeCartAdd.executor": "Run",
-    "Application.Dwd04_TradeOrderDetail.executor": "Run",
-    "Application.Dwd05_TradeOrderCancelDetail.executor": "Run",
-    "Application.Dwd06_TradePayDetailSuc.executor": "Run",
-    "Application.DwdBaseDb.executor": "Run",
-    "Application.DwdBaseLog.executor": "Run",
-    "Application.DwdCartAddInfo.executor": "Run",
-    "Application.DwdInteractionCommentInfo.executor": "Run",
-    "Application.DwdTradeOrderCancelDetail.executor": "Run",
-    "Application.DwdTradeOrderDetail.executor": "Run",
-    "Application.DwdTradeOrderPaySucDetail.executor": "Run",
-    "Application.DwdTradeOrderRefund.executor": "Run",
-    "Application.DwdTradeOrderRefundSuccess.executor": "Run",
-    "Application.DwdTrafficBaseLogSplit.executor": "Run",
-    "Application.DwsTradeCartAddUuWindow.executor": "Run",
-    "Application.DwsTradeOrderWindow (1).executor": "Run",
-    "Application.DwsTradeOrderWindow.executor": "Run",
-    "Application.DwsTradePaymentSucWindow (1).executor": "Run",
-    "Application.DwsTradePaymentSucWindow.executor": "Run",
-    "Application.DwsTradeProvinceOrderWindow (1).executor": "Run",
-    "Application.DwsTradeProvinceOrderWindow.executor": "Run",
-    "Application.DwsTradeSkuOrderWindowSyncCache (1).executor": "Run",
-    "Application.DwsTradeSkuOrderWindowSyncCache (2).executor": "Run",
-    "Application.DwsTradeSkuOrderWindowSyncCache.executor": "Run",
-    "Application.DwsTradeTrademarkCategoryUserRefundWindow (1).executor": "Debug",
-    "Application.DwsTradeTrademarkCategoryUserRefundWindow.executor": "Debug",
-    "Application.DwsTradeTrademarkCategoryUserRefundWindow1.executor": "Debug",
-    "Application.DwsTrafficHomeDetailPageViewWindow (1).executor": "Run",
-    "Application.DwsTrafficHomeDetailPageViewWindow (2).executor": "Run",
-    "Application.DwsTrafficHomeDetailPageViewWindow (3).executor": "Run",
-    "Application.DwsTrafficHomeDetailPageViewWindow.executor": "Run",
-    "Application.DwsTrafficSourceKeywordPageViewWindow.executor": "Run",
-    "Application.DwsTrafficVcChArIsNewPageViewWindow (1).executor": "Run",
-    "Application.DwsTrafficVcChArIsNewPageViewWindow (2).executor": "Run",
-    "Application.DwsTrafficVcChArIsNewPageViewWindow (3).executor": "Run",
-    "Application.DwsTrafficVcChArIsNewPageViewWindow (4).executor": "Run",
-    "Application.DwsTrafficVcChArIsNewPageViewWindow.executor": "Run",
-    "Application.DwsUserUserLoginWindow.executor": "Run",
-    "Application.DwsUserUserRegisterWindow (1).executor": "Run",
-    "Application.DwsUserUserRegisterWindow.executor": "Run",
-    "Application.FlinkCDC_01_DS.executor": "Run",
-    "Application.FlinkCDC_02_SQL.executor": "Run",
-    "Application.FlinkCdcTest.executor": "Run",
-    "Application.HBaseUtil.executor": "Run",
-    "Application.JsonTest.executor": "Run",
-    "Application.KafkaMain.executor": "Run",
-    "Application.KeywordUtil.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.PhoenixUtil.executor": "Run",
-    "Application.RedisUtil.executor": "Run",
-    "Application.RegistTest.executor": "Run",
-    "Application.Test01_Doris01.executor": "Run",
-    "Application.Test02_Doris_API.executor": "Run",
-    "Application.Wrapper.executor": "Run",
-    "Application.testString.executor": "Run",
-    "Maven.gmall2025-realtime [clean].executor": "Run",
-    "Maven.realtime-gmall [clean].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.Gmall2025PublisherApplication.executor": "Debug",
-    "jdk.selected.JAVA_MODULE": "1.8.0_271",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/02_code/gmall2025-parent/gmall2025-publisher/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15347019",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BaseDbApp.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.ConsumerDemo1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DimApp (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.DimApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Dwd01_DwdTrafficBaseLogSplit.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Dwd02_DwdInteractionCommentInfo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Dwd03_TradeCartAdd.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Dwd04_TradeOrderDetail.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Dwd05_TradeOrderCancelDetail.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Dwd06_TradePayDetailSuc.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwdBaseDb.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwdBaseLog.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwdCartAddInfo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwdInteractionCommentInfo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwdTradeOrderCancelDetail.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwdTradeOrderDetail.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwdTradeOrderPaySucDetail.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwdTradeOrderRefund.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwdTradeOrderRefundSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwdTrafficBaseLogSplit.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsTradeCartAddUuWindow.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsTradeOrderWindow (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsTradeOrderWindow.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsTradePaymentSucWindow (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsTradePaymentSucWindow.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsTradeProvinceOrderWindow (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsTradeProvinceOrderWindow.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsTradeSkuOrderWindowSyncCache (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsTradeSkuOrderWindowSyncCache (2).executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsTradeSkuOrderWindowSyncCache.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsTradeTrademarkCategoryUserRefundWindow (1).executor&quot;: &quot;Debug&quot;,
+    &quot;Application.DwsTradeTrademarkCategoryUserRefundWindow.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.DwsTradeTrademarkCategoryUserRefundWindow1.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.DwsTrafficHomeDetailPageViewWindow (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsTrafficHomeDetailPageViewWindow (2).executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsTrafficHomeDetailPageViewWindow (3).executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsTrafficHomeDetailPageViewWindow.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsTrafficSourceKeywordPageViewWindow.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsTrafficVcChArIsNewPageViewWindow (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsTrafficVcChArIsNewPageViewWindow (2).executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsTrafficVcChArIsNewPageViewWindow (3).executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsTrafficVcChArIsNewPageViewWindow (4).executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsTrafficVcChArIsNewPageViewWindow.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsUserUserLoginWindow.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsUserUserRegisterWindow (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.DwsUserUserRegisterWindow.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FlinkCDC_01_DS.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FlinkCDC_02_SQL.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FlinkCdcTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HBaseUtil.executor&quot;: &quot;Run&quot;,
+    &quot;Application.JsonTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.KafkaMain.executor&quot;: &quot;Run&quot;,
+    &quot;Application.KeywordUtil.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PhoenixUtil.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RedisUtil.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RegistTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test01_Doris01.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test02_Doris_API.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Wrapper.executor&quot;: &quot;Run&quot;,
+    &quot;Application.testString.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.gmall2025-realtime [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.realtime-gmall [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Gmall2025PublisherApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8.0_271&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/02_code/gmall2025-parent/gmall2025-publisher/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15347019&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "GitStage.ChangesTree.GroupingKeys": [
-      "repository"
+  &quot;keyToStringList&quot;: {
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -291,7 +291,9 @@
       <workItem from="1754993245234" duration="2722000" />
       <workItem from="1755133270809" duration="690000" />
       <workItem from="1755224262865" duration="3389000" />
-      <workItem from="1755300673526" duration="5839000" />
+      <workItem from="1755300673526" duration="6788000" />
+      <workItem from="1755394489949" duration="4383000" />
+      <workItem from="1755527714134" duration="7933000" />
     </task>
     <task id="LOCAL-00001" summary="互动域评论事务事实表">
       <option name="closed" value="true" />
@@ -669,7 +671,23 @@
       <option name="project" value="LOCAL" />
       <updated>1755334879611</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="后端实现ads层">
+      <option name="closed" value="true" />
+      <created>1755338821383</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1755338821383</updated>
+    </task>
+    <task id="LOCAL-00049" summary="后端实现ads层(2)">
+      <option name="closed" value="true" />
+      <created>1755338840675</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1755338840675</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -687,8 +705,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="DwdTradeOrderDetail" />
-    <MESSAGE value="设置状态的保留时间" />
     <MESSAGE value="cancel 订单事实表" />
     <MESSAGE value="支付成功详情表" />
     <MESSAGE value="交易域退单事务事实表" />
@@ -712,7 +728,9 @@
     <MESSAGE value="修改hbaseSink" />
     <MESSAGE value="后端接口实现" />
     <MESSAGE value="后端接口实现(2)" />
-    <option name="LAST_COMMIT_MESSAGE" value="后端接口实现(2)" />
+    <MESSAGE value="后端实现ads层" />
+    <MESSAGE value="后端实现ads层(2)" />
+    <option name="LAST_COMMIT_MESSAGE" value="后端实现ads层(2)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
