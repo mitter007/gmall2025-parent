@@ -2,6 +2,7 @@ package com.spdbccc.gmall.controller;
 
 import com.spdbccc.gmall.bean.*;
 import com.spdbccc.gmall.service.TrafficChannelStatsService;
+import com.spdbccc.gmall.util.DateFormatUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,7 +23,7 @@ public class TrafficController {
     public String getUvCt(
             @RequestParam(value = "date", defaultValue = "1") Integer date) {
         if (date == 1) {
-            date = DateUtil.now();
+            date = DateFormatUtil.now();
         }
         List<TrafficUvCt> trafficUvCtList = trafficChannelStatsService.getUvCt(date);
         if (trafficUvCtList == null) {
@@ -68,7 +69,7 @@ public class TrafficController {
     public String getPvCt(
             @RequestParam(value = "date", defaultValue = "1") Integer date) {
         if (date == 1) {
-            date = DateUtil.now();
+            date = DateFormatUtil.now();
         }
         List<TrafficSvCt> trafficSvCtList = trafficChannelStatsService.getSvCt(date);
         if (trafficSvCtList == null) {
@@ -114,7 +115,7 @@ public class TrafficController {
     public String getPvPerSession(
             @RequestParam(value = "date", defaultValue = "1") Integer date) {
         if (date == 1) {
-            date = DateUtil.now();
+            date = DateFormatUtil.now();
         }
         List<TrafficPvPerSession> trafficPvPerSessionList = trafficChannelStatsService.getPvPerSession(date);
         if (trafficPvPerSessionList == null) {
@@ -160,7 +161,7 @@ public class TrafficController {
     public String getDurPerSession(
             @RequestParam(value = "date", defaultValue = "1") Integer date) {
         if (date == 1) {
-            date = DateUtil.now();
+            date = DateFormatUtil.now();
         }
         List<TrafficDurPerSession> trafficDurPerSessionList = trafficChannelStatsService.getDurPerSession(date);
         if (trafficDurPerSessionList == null) {
@@ -206,7 +207,7 @@ public class TrafficController {
     public String getUjRate(
             @RequestParam(value = "date", defaultValue = "1") Integer date) {
         if (date == 1) {
-            date = DateUtil.now();
+            date = DateFormatUtil.now();
         }
         List<TrafficUjRate> trafficUjRateList = trafficChannelStatsService.getUjRate(date);
         if (trafficUjRateList == null) {
